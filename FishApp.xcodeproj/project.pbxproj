@@ -14,8 +14,12 @@
 		6A415934275DC78A0038D60C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A415933275DC78A0038D60C /* Assets.xcassets */; };
 		6A415937275DC78A0038D60C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A415935275DC78A0038D60C /* LaunchScreen.storyboard */; };
 		6A415940275DCB010038D60C /* FishHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41593F275DCB010038D60C /* FishHelper.swift */; };
-		6A415942275DCB110038D60C /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415941275DCB110038D60C /* Fish.swift */; };
+		6A415942275DCB110038D60C /* FishDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415941275DCB110038D60C /* FishDecode.swift */; };
 		6A415944275DCC450038D60C /* FishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415943275DCC450038D60C /* FishVC.swift */; };
+		6A41594A275DD8AB0038D60C /* FishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415949275DD8AB0038D60C /* FishCell.swift */; };
+		6A41594C275DD8B90038D60C /* FishTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41594B275DD8B90038D60C /* FishTVC.swift */; };
+		6A41594E275DE0290038D60C /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41594D275DE0290038D60C /* SwiftJSON.swift */; };
+		6A415951275DE0AC0038D60C /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415950275DE0AC0038D60C /* Fish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +32,12 @@
 		6A415936275DC78A0038D60C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A415938275DC78A0038D60C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A41593F275DCB010038D60C /* FishHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishHelper.swift; sourceTree = "<group>"; };
-		6A415941275DCB110038D60C /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		6A415941275DCB110038D60C /* FishDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishDecode.swift; sourceTree = "<group>"; };
 		6A415943275DCC450038D60C /* FishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishVC.swift; sourceTree = "<group>"; };
+		6A415949275DD8AB0038D60C /* FishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishCell.swift; sourceTree = "<group>"; };
+		6A41594B275DD8B90038D60C /* FishTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishTVC.swift; sourceTree = "<group>"; };
+		6A41594D275DE0290038D60C /* SwiftJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
+		6A415950275DE0AC0038D60C /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,8 @@
 		6A415929275DC7890038D60C /* FishApp */ = {
 			isa = PBXGroup;
 			children = (
+				6A41594F275DE04E0038D60C /* Model */,
+				6A415948275DD80B0038D60C /* Fish List */,
 				6A415947275DCC780038D60C /* Favorite Fish */,
 				6A415946275DCC6C0038D60C /* Web View */,
 				6A415945275DCC570038D60C /* Setting */,
@@ -73,6 +83,7 @@
 				6A415933275DC78A0038D60C /* Assets.xcassets */,
 				6A415935275DC78A0038D60C /* LaunchScreen.storyboard */,
 				6A415938275DC78A0038D60C /* Info.plist */,
+				6A41594D275DE0290038D60C /* SwiftJSON.swift */,
 			);
 			path = FishApp;
 			sourceTree = "<group>";
@@ -81,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				6A41593F275DCB010038D60C /* FishHelper.swift */,
-				6A415941275DCB110038D60C /* Fish.swift */,
+				6A415941275DCB110038D60C /* FishDecode.swift */,
 				6A415943275DCC450038D60C /* FishVC.swift */,
 			);
 			path = FishAPI;
@@ -106,6 +117,23 @@
 			children = (
 			);
 			path = "Favorite Fish";
+			sourceTree = "<group>";
+		};
+		6A415948275DD80B0038D60C /* Fish List */ = {
+			isa = PBXGroup;
+			children = (
+				6A415949275DD8AB0038D60C /* FishCell.swift */,
+				6A41594B275DD8B90038D60C /* FishTVC.swift */,
+			);
+			path = "Fish List";
+			sourceTree = "<group>";
+		};
+		6A41594F275DE04E0038D60C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A415950275DE0AC0038D60C /* Fish.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +207,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A415944275DCC450038D60C /* FishVC.swift in Sources */,
-				6A415942275DCB110038D60C /* Fish.swift in Sources */,
+				6A415942275DCB110038D60C /* FishDecode.swift in Sources */,
 				6A41592F275DC7890038D60C /* ViewController.swift in Sources */,
 				6A415940275DCB010038D60C /* FishHelper.swift in Sources */,
+				6A41594E275DE0290038D60C /* SwiftJSON.swift in Sources */,
+				6A415951275DE0AC0038D60C /* Fish.swift in Sources */,
 				6A41592B275DC7890038D60C /* AppDelegate.swift in Sources */,
 				6A41592D275DC7890038D60C /* SceneDelegate.swift in Sources */,
+				6A41594A275DD8AB0038D60C /* FishCell.swift in Sources */,
+				6A41594C275DD8B90038D60C /* FishTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

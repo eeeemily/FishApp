@@ -17,7 +17,7 @@ struct Activity: Decodable {
     var key: String
 }
 
-class Fish: Decodable {
+class FishDecode: Decodable {
 
     enum CodingKeys: String, CodingKey {
         case activity
