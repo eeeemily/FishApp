@@ -10,7 +10,7 @@ import UIKit
 
 enum FisheriesRegion: Int, CaseIterable{
     case Alaska, GreaterAtlantc, WestCoast, Southeast, PacificIslands
-    func with() ->String{
+    func region() ->String{
         switch self{
         case .Alaska:
             return "Alaska"
@@ -22,6 +22,21 @@ enum FisheriesRegion: Int, CaseIterable{
             return "Southeast"
         case .PacificIslands:
             return "Pacific Islands"
+        }
+    }
+
+    init(_ region: String){
+        switch region{
+            case "Alaska":
+                self = .Alaska
+            case "Greater Atlantic":
+                self = .GreaterAtlantc
+            case "West Coast":
+                self = .WestCoast
+            case "Southeast":
+                self = .Southeast
+            default: //"Pacific Islands":
+                self = .PacificIslands
         }
     }
 }

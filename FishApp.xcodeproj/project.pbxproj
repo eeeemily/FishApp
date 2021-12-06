@@ -151,6 +151,7 @@
 		6A41594F275DE04E0038D60C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6AC0DB8A275EB72E00FF97B8 /* FisheriesRegion.swift */,
 				6A415950275DE0AC0038D60C /* Fish.swift */,
 				6A415954275DEB020038D60C /* FishInfo.swift */,
 			);
@@ -171,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				6AC0DB88275EB4C400FF97B8 /* FishingVC.swift */,
-				6AC0DB8A275EB72E00FF97B8 /* FisheriesRegion.swift */,
 			);
 			path = GoFishing;
 			sourceTree = "<group>";

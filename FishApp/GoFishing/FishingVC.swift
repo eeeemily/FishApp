@@ -9,13 +9,18 @@ import UIKit
 
 class FishingVC: UIViewController {
     @IBOutlet weak var fisheriesPicker: UIPickerView!
+    var fishInfo: FishInfo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func showFishes(){
+        
+    }
     @IBAction func goButton(_ sender: Any) {
         print(fisheriesPicker.selectedRow(inComponent: 0))
+        showFishes()
     }
 }
 
@@ -40,7 +45,7 @@ extension FishingVC: UIPickerViewDataSource, UIPickerViewDelegate {
             }
             label.font = UIFont (name: "Chalkboard SE Regular", size: 20)
             label.textColor = UIColor.white
-            label.text =  FisheriesRegion(rawValue: row)?.with()
+            label.text =  FisheriesRegion(rawValue: row)?.region()
             label.textAlignment = .center
 
             return label

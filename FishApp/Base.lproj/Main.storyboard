@@ -78,7 +78,7 @@
                                 <state key="normal" title="Let's go!"/>
                                 <connections>
                                     <action selector="goButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="aTb-Oi-Dez"/>
-                                    <segue destination="Jh5-oH-IT8" kind="presentation" customClass="Left2RightSegue" customModule="FishApp" customModuleProvider="target" modalPresentationStyle="fullScreen" id="Aab-Ro-bxK"/>
+                                    <segue destination="Jh5-oH-IT8" kind="presentation" customClass="Left2RightSegue" customModule="FishApp" customModuleProvider="target" modalPresentationStyle="pageSheet" id="Aab-Ro-bxK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,6 +86,7 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="vEe-0M-lAl"/>
+                    <navigationItem key="navigationItem" id="Qpy-mx-eaA"/>
                     <connections>
                         <outlet property="fisheriesPicker" destination="CO2-8C-bWb" id="61O-ai-GS5"/>
                     </connections>
@@ -98,7 +99,7 @@
             <objects>
                 <viewController id="Jh5-oH-IT8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hU-oU-MYy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-sr-rYi">
@@ -106,7 +107,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start a new Trip"/>
                                 <connections>
-                                    <segue destination="0Qf-4D-pgJ" kind="presentation" customClass="Left2RightSegue" customModule="FishApp" customModuleProvider="target" modalPresentationStyle="fullScreen" id="eb2-bC-Zn3"/>
+                                    <segue destination="0Qf-4D-pgJ" kind="custom" customClass="Right2LeftSegue" customModule="FishApp" customModuleProvider="target" id="0rd-Vp-C1O"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,7 +149,6 @@
                         <segue destination="6jL-k9-Gw3" kind="relationship" relationship="viewControllers" id="uRv-bR-deZ"/>
                         <segue destination="ieU-Ov-FFp" kind="relationship" relationship="viewControllers" id="yXf-El-xWd"/>
                         <segue destination="0Qf-4D-pgJ" kind="relationship" relationship="viewControllers" id="qw3-Nv-U8u"/>
-                        <segue destination="Nsm-NU-hx9" kind="relationship" relationship="viewControllers" id="WzP-O0-F6r"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guR-mg-q2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,7 +285,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qw3-Nv-U8u"/>
+        <segue reference="0rd-Vp-C1O"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

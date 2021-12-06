@@ -30,6 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 vc.fishInfo = fishInfo
                 print("new!")
             }
+            if let vc = tabController.viewControllers?.last as? FishingVC{ //has to be the first in all tab bar choices
+                vc.fishInfo = fishInfo
+                print("new!")
+            }
         }
         }
     
