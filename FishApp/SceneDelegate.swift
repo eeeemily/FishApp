@@ -3,13 +3,14 @@
 //  FishApp
 //
 //  Created by Zheng, Minghui on 12/5/21.
-//
+// reviews = FishInfo
 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var fishInfo = FishInfo()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -17,6 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        loadFishes()
+        if let vc = self.window?.rootViewController as? FishTVC {
+            vc.fishInfo = fishInfo
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +52,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
-
+    func loadFishes() {
+        let urlJSON = "https://www.fishwatch.gov/api/species"
+        guard let fishInfoURL = URL(string: urlJSON) else { return }
+        guard let contents = try? Data(contentsOf: fishInfoURL) else { return }
+        let library = JSON(contents).arrayValue
+        
+        for fish in library {
+//            fishInfo.addFish(name: fish["name"].stringValue)
+            fishInfo.addFish(name: fish["name"].stringValue,
+                             biology: fish["biology"].stringValue,
+                             habitat: fish["habitat"].stringValue,
+                             fisheries: fish["fisheries"].stringValue)
+        }
+    }
 }
+
+//        fishs.append(Fish(name: name, biology: biology, habitat: habitat, fisheries: fisheries))
 
