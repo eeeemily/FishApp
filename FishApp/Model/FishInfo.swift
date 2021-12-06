@@ -10,8 +10,8 @@ class FishInfo {
     
     var fishs = [Fish]()
     
-    func addFish(name: String, protein: String, quote: String, fisheries: String) {
-        fishs.append(Fish(name: name, protein: protein, quote: quote, fisheries: fisheries))
+    func addFish(name: String, protein: String, quote: String, fisheries: String, pic: String) {
+        fishs.append(Fish(name: name, protein: protein, quote: quote, fisheries: fisheries, pic: pic))
     }
 
 }

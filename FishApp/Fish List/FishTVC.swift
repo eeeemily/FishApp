@@ -32,7 +32,7 @@ class FishTVC: UITableViewController {
             fatalError("Expected FishCell")
         }
 
-        cell.update(name: fishInfo.fishs[indexPath.row].name, protein: fishInfo.fishs[indexPath.row].protein , quote: fishInfo.fishs[indexPath.row].quote, fisheries: fishInfo.fishs[indexPath.row].fisheries)
+        cell.update(name: fishInfo.fishs[indexPath.row].name, protein: fishInfo.fishs[indexPath.row].protein , quote: fishInfo.fishs[indexPath.row].quote, fisheries: fishInfo.fishs[indexPath.row].fisheries, pic: fishInfo.fishs[indexPath.row].pic)
 
         return cell
     }

@@ -20,6 +20,8 @@
 		6A41594E275DE0290038D60C /* SwiftJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A41594D275DE0290038D60C /* SwiftJSON.swift */; };
 		6A415951275DE0AC0038D60C /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415950275DE0AC0038D60C /* Fish.swift */; };
 		6A415955275DEB020038D60C /* FishInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A415954275DEB020038D60C /* FishInfo.swift */; };
+		6AC0DB7A275E8F9E00FF97B8 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB79275E8F9E00FF97B8 /* ImageHelper.swift */; };
+		6AC0DB7C275E900700FF97B8 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB7B275E900700FF97B8 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		6A41594D275DE0290038D60C /* SwiftJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftJSON.swift; sourceTree = "<group>"; };
 		6A415950275DE0AC0038D60C /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 		6A415954275DEB020038D60C /* FishInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishInfo.swift; sourceTree = "<group>"; };
+		6AC0DB79275E8F9E00FF97B8 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		6AC0DB7B275E900700FF97B8 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			children = (
 				6A415949275DD8AB0038D60C /* FishCell.swift */,
 				6A41594B275DD8B90038D60C /* FishTVC.swift */,
+				6AC0DB79275E8F9E00FF97B8 /* ImageHelper.swift */,
+				6AC0DB7B275E900700FF97B8 /* Utils.swift */,
 			);
 			path = "Fish List";
 			sourceTree = "<group>";
@@ -216,6 +222,8 @@
 				6A41594A275DD8AB0038D60C /* FishCell.swift in Sources */,
 				6A41594C275DD8B90038D60C /* FishTVC.swift in Sources */,
 				6A415955275DEB020038D60C /* FishInfo.swift in Sources */,
+				6AC0DB7A275E8F9E00FF97B8 /* ImageHelper.swift in Sources */,
+				6AC0DB7C275E900700FF97B8 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

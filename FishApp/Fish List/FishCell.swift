@@ -14,14 +14,33 @@ class FishCell: UITableViewCell {
     @IBOutlet weak var quoteLabel: UILabel!
     @IBOutlet weak var proteinLabel: UILabel!
     
+    let imageHelper = ImageHelper()
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 
-    func update(name: String, protein: String,quote:String,fisheries:String) {
+    func update(name: String, protein: String,quote:String,fisheries:String, pic:String) {
         nameLabel?.text = name
         proteinLabel?.text = protein
         quoteLabel?.text = quote
         fisheriesLabel?.text = fisheries
+        loadPhoto(urlString: pic)
+    }
+    func loadPhoto(urlString: String){
+        imageHelper.fetchImage(url: urlString) { result in
+            switch result {
+            case let .Success(image):
+                OperationQueue.main.addOperation() {
+                    self.fishImg?.image = image
+                }
+            case let .Failure(error):
+                OperationQueue.main.addOperation {
+                    self.fishImg?.image = nil
+                }
+                print("error: \(error)")
+            }
+        }
+        
     }
 }

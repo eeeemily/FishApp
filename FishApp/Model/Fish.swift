@@ -13,13 +13,16 @@ class Fish {
     var protein: String
     var quote: String
     var fisheries: String
+    var pic: String
     
-    init(name: String, protein: String, quote: String, fisheries: String) {
+    init(name: String, protein: String, quote: String, fisheries: String, pic:String) {
         
         self.name = name
         self.protein = protein
         self.quote = quote
         self.fisheries = fisheries
+        self.pic = pic
+        
     }
     
 }

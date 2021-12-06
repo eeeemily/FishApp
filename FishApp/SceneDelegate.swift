@@ -67,8 +67,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             fishInfo.addFish(name: fish["Species Name"].stringValue,
                  protein: fish["Protein"].stringValue,
                  quote: fish["Quote"].stringValue,
-                 fisheries: fish["NOAA Fisheries Region"].stringValue)
-//            print(fish["Species Name"].stringValue)
+                 fisheries: fish["NOAA Fisheries Region"].stringValue, pic: fish["Species Illustration Photo"]["src"].stringValue)
+//            print("hello",fish["Species Illustration Photo"]["src"].stringValue)
 
 
         }
