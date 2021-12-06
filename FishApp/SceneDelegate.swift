@@ -25,10 +25,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //                print("new!")
 //            }
 //        }
-        if let vc = self.window?.rootViewController as? FishTVC {
-            vc.fishInfo = fishInfo
-            print("hello")
-
+        if let tabController = window?.rootViewController as? UITabBarController {
+            if let vc = tabController.viewControllers?.first as? FishTVC{ //has to be the first in all tab bar choices
+                vc.fishInfo = fishInfo
+                print("new!")
+            }
         }
         }
     
