@@ -94,7 +94,7 @@ class FishTVC: UITableViewController {
         }
 //        cell.textLabel?.text = "test"
         
-        cell.update(name: fishInfo?.fishs.count.description ?? "def", biology: "t", habitat: "t", fisheries: "t")
+        cell.update(name: fishInfo.fishs[indexPath.row].name, protein: fishInfo.fishs[indexPath.row].protein , quote: fishInfo.fishs[indexPath.row].quote, fisheries: fishInfo.fishs[indexPath.row].fisheries)
 
 //        print(fishInfo.fishs[1].name)
         

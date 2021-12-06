@@ -11,21 +11,21 @@ class FishCell: UITableViewCell {
     @IBOutlet weak var fishImg: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var fisheriesLabel: UILabel!
-    @IBOutlet weak var habitatLabel: UILabel!
-    @IBOutlet weak var biologyLabel: UILabel!
+    @IBOutlet weak var quoteLabel: UILabel!
+    @IBOutlet weak var proteinLabel: UILabel!
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
 
-    func update(name: String, biology: String,habitat:String,fisheries:String) {
+    func update(name: String, protein: String,quote:String,fisheries:String) {
 //        if let name = entry.value(forKey: "name") as? String,
-//           let biology = entry.value(forKey: "biology") as? String,
+//           let protein = entry.value(forKey: "protein") as? String,
 //           let strength = entry.value(forKey: "strength") as? Int{
             
             nameLabel?.text = name
-            biologyLabel?.text = biology
-        habitatLabel?.text = habitat
+            proteinLabel?.text = protein
+        quoteLabel?.text = quote
         fisheriesLabel?.text = fisheries
     }
 }
