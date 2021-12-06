@@ -51,52 +51,68 @@
         <!--FishTVC-->
         <scene sceneID="82A-uZ-aRN">
             <objects>
-                <tableViewController id="6jL-k9-Gw3" customClass="FishTVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FishTVC" id="6jL-k9-Gw3" customClass="FishTVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QRx-MR-goh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="585" id="qBJ-kA-coR" customClass="FishCell" customModule="FishApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="585"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FishCell" rowHeight="550" id="qBJ-kA-coR" customClass="FishCell" customModule="FishApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="550"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qBJ-kA-coR" id="9wl-nJ-NRT">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="585"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="550"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IdL-IR-c9Q">
-                                            <rect key="frame" x="101" y="11" width="213" height="146"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOAA Fisheries Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-7E-JvS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOAA Fisheries Region" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-7E-JvS">
                                             <rect key="frame" x="41" y="207" width="332" height="58"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="58" id="rUn-pi-spU"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Habitat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK0-rz-DUO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Habitat:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK0-rz-DUO">
                                             <rect key="frame" x="40" y="301" width="332" height="70"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Species Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA9-fv-cHs">
-                                            <rect key="frame" x="152" y="165" width="110" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA9-fv-cHs">
+                                            <rect key="frame" x="152" y="194" width="110" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13X-ja-xkk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Biology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13X-ja-xkk">
                                             <rect key="frame" x="50" y="401" width="314" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IdL-IR-c9Q">
+                                            <rect key="frame" x="100" y="40" width="214" height="146"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="146" id="eOW-T1-ZMy"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dd2-7E-JvS" firstAttribute="top" secondItem="IdL-IR-c9Q" secondAttribute="bottom" constant="21" id="0Yg-1J-GTA"/>
+                                        <constraint firstItem="UK0-rz-DUO" firstAttribute="top" secondItem="dd2-7E-JvS" secondAttribute="bottom" constant="36" id="7gc-Lt-Ut8"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="centerX" secondItem="FA9-fv-cHs" secondAttribute="centerX" id="AFf-n4-idw"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="centerX" secondItem="dd2-7E-JvS" secondAttribute="centerX" id="Gw7-4R-x0Z"/>
+                                        <constraint firstItem="FA9-fv-cHs" firstAttribute="top" secondItem="IdL-IR-c9Q" secondAttribute="bottom" constant="8" id="NMB-OA-Ad5"/>
+                                        <constraint firstItem="dd2-7E-JvS" firstAttribute="leading" secondItem="9wl-nJ-NRT" secondAttribute="leadingMargin" constant="21" id="PwN-6Y-FaJ"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="leading" secondItem="9wl-nJ-NRT" secondAttribute="leadingMargin" constant="80" id="Wca-uj-f0v"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="centerX" secondItem="9wl-nJ-NRT" secondAttribute="centerX" id="XG6-Mn-Jvt"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="centerX" secondItem="13X-ja-xkk" secondAttribute="centerX" id="XQh-CH-yie"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="centerX" secondItem="UK0-rz-DUO" secondAttribute="centerX" id="bV7-d6-DoK"/>
+                                        <constraint firstItem="IdL-IR-c9Q" firstAttribute="top" secondItem="9wl-nJ-NRT" secondAttribute="top" constant="40" id="mBd-1Q-WWW"/>
+                                        <constraint firstAttribute="bottom" secondItem="13X-ja-xkk" secondAttribute="bottom" constant="49" id="w8u-0k-FUh"/>
+                                        <constraint firstItem="13X-ja-xkk" firstAttribute="top" secondItem="9wl-nJ-NRT" secondAttribute="top" constant="401" id="yrF-JV-PUN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="biologyLabel" destination="13X-ja-xkk" id="Jzo-8W-aGF"/>

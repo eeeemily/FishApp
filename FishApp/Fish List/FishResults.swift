@@ -11,8 +11,8 @@ import Foundation
 
 struct FishResults: Decodable {
     var name: String
-    var biology: String
-    var habitat: String
+    var protein: String
+    var quote: String
     var fisheries: String
 }
 

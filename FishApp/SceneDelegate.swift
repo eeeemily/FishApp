@@ -4,7 +4,7 @@
 //
 //  Created by Zheng, Minghui on 12/5/21.
 // reviews = FishInfo
-
+//https://stackoverflow.com/questions/30592521/opening-view-controller-from-app-delegate-using-swift
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -19,10 +19,66 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         loadFishes()
+        if let navController = window?.rootViewController as? UINavigationController{
+            if let vc = navController.viewControllers.last as? FishTVC{
+                vc.fishInfo = fishInfo
+                print("new!")
+            }
+        }
+        
+        
+        
+//        if let nav = UINavigationController(rootViewController: FishTVC()){
+//
+//        }
+//        window!.rootViewController = nav
+////        window?.rootViewController.
+////        window.
+//        if let vc = self.window?.rootViewController as? FishTVC{
+//            vc.fishInfo = fishInfo
+//            print("hello new")
+//            print(fishInfo)
+//        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        //never true
         if let vc = self.window?.rootViewController as? FishTVC {
             vc.fishInfo = fishInfo
+            print("hello fishinfo")
+            print(fishInfo)
         }
-    }
+//        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FishTVC") as? FishTVC {
+//
+//            if let window = self.window, let rootViewController = window.rootViewController {
+//                print("hello fishinfo")
+//                print(fishInfo.fishs.count)
+//                controller.fishInfo = fishInfo
+//                controller.
+//                var currentController = rootViewController
+//                while let presentedController = currentController.presentedViewController {
+//                    currentController = presentedController
+//                }
+//                currentController.present(controller, animated: true, completion: nil)
+//            }
+        }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -59,14 +115,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let library = JSON(contents).arrayValue
         
         for fish in library {
-//            fishInfo.addFish(name: fish["name"].stringValue)
-            fishInfo.addFish(name: fish["name"].stringValue,
-                             biology: fish["biology"].stringValue,
-                             habitat: fish["habitat"].stringValue,
-                             fisheries: fish["fisheries"].stringValue)
+            fishInfo.addFish(name: fish["Species Name"].stringValue,
+                 protein: fish["Protein"].stringValue,
+                 quote: fish["Quote"].stringValue,
+                 fisheries: fish["NOAA Fisheries Region"].stringValue)
+//            print(fish["Species Name"].stringValue)
+//            print(fish["Protein"].stringValue)
+//            print(fish["Quote"].stringValue)
+//            print(fish["NOAA Fisheries Region"].stringValue)
+
         }
+//        print("second fish",fishInfo.fishs[indexPath.row].name)
+        print("fish count",fishInfo.fishs.count)
+
     }
 }
 
-//        fishs.append(Fish(name: name, biology: biology, habitat: habitat, fisheries: fisheries))
+//        fishs.append(Fish(name: name, protein: protein, quote: quote, fisheries: fisheries))
 

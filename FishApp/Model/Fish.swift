@@ -10,15 +10,15 @@ import Foundation
 class Fish {
     
     var name: String
-    var biology: String
-    var habitat: String
+    var protein: String
+    var quote: String
     var fisheries: String
     
-    init(name: String, biology: String, habitat: String, fisheries: String) {
+    init(name: String, protein: String, quote: String, fisheries: String) {
         
         self.name = name
-        self.biology = biology
-        self.habitat = habitat
+        self.protein = protein
+        self.quote = quote
         self.fisheries = fisheries
     }
     

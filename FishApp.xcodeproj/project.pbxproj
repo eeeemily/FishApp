@@ -129,7 +129,6 @@
 				6A415949275DD8AB0038D60C /* FishCell.swift */,
 				6A41594B275DD8B90038D60C /* FishTVC.swift */,
 				6A415952275DE3890038D60C /* FishResults.swift */,
-				6A415954275DEB020038D60C /* FishInfo.swift */,
 			);
 			path = "Fish List";
 			sourceTree = "<group>";
@@ -138,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				6A415950275DE0AC0038D60C /* Fish.swift */,
+				6A415954275DEB020038D60C /* FishInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
