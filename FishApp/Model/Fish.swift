@@ -22,7 +22,4 @@ class Fish {
         self.fisheries = fisheries
     }
     
-//    convenience init(title: String, genre: GenreType, released: Int) {
-//        self.init(title: title, genre: genre, released: released, rating: 0)
-//    }
 }

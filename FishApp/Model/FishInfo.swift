@@ -13,11 +13,7 @@ class FishInfo {
     func addFish(name: String, protein: String, quote: String, fisheries: String) {
         fishs.append(Fish(name: name, protein: protein, quote: quote, fisheries: fisheries))
     }
-    
-    func getFishs() -> [Fish]{
-        return fishs
-    }
-    
+
 }
 
 

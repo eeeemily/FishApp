@@ -26,57 +26,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
         
-        
-        
-//        if let nav = UINavigationController(rootViewController: FishTVC()){
-//
-//        }
-//        window!.rootViewController = nav
-////        window?.rootViewController.
-////        window.
-//        if let vc = self.window?.rootViewController as? FishTVC{
-//            vc.fishInfo = fishInfo
-//            print("hello new")
-//            print(fishInfo)
-//        }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        //never true
-        if let vc = self.window?.rootViewController as? FishTVC {
-            vc.fishInfo = fishInfo
-            print("hello fishinfo")
-            print(fishInfo)
-        }
-//        if let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FishTVC") as? FishTVC {
-//
-//            if let window = self.window, let rootViewController = window.rootViewController {
-//                print("hello fishinfo")
-//                print(fishInfo.fishs.count)
-//                controller.fishInfo = fishInfo
-//                controller.
-//                var currentController = rootViewController
-//                while let presentedController = currentController.presentedViewController {
-//                    currentController = presentedController
-//                }
-//                currentController.present(controller, animated: true, completion: nil)
-//            }
         }
     
 
@@ -120,9 +69,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                  quote: fish["Quote"].stringValue,
                  fisheries: fish["NOAA Fisheries Region"].stringValue)
 //            print(fish["Species Name"].stringValue)
-//            print(fish["Protein"].stringValue)
-//            print(fish["Quote"].stringValue)
-//            print(fish["NOAA Fisheries Region"].stringValue)
+
 
         }
 //        print("second fish",fishInfo.fishs[indexPath.row].name)
@@ -131,5 +78,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 }
 
-//        fishs.append(Fish(name: name, protein: protein, quote: quote, fisheries: fisheries))
 

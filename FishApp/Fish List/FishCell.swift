@@ -19,12 +19,8 @@ class FishCell: UITableViewCell {
     }
 
     func update(name: String, protein: String,quote:String,fisheries:String) {
-//        if let name = entry.value(forKey: "name") as? String,
-//           let protein = entry.value(forKey: "protein") as? String,
-//           let strength = entry.value(forKey: "strength") as? Int{
-            
-            nameLabel?.text = name
-            proteinLabel?.text = protein
+        nameLabel?.text = name
+        proteinLabel?.text = protein
         quoteLabel?.text = quote
         fisheriesLabel?.text = fisheries
     }
