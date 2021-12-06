@@ -98,6 +98,13 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="biologyLabel" destination="13X-ja-xkk" id="Jzo-8W-aGF"/>
+                                    <outlet property="fishImg" destination="IdL-IR-c9Q" id="adi-v7-UxB"/>
+                                    <outlet property="fisheriesLabel" destination="dd2-7E-JvS" id="DaC-wR-Plc"/>
+                                    <outlet property="habitatLabel" destination="UK0-rz-DUO" id="RlF-bb-vkR"/>
+                                    <outlet property="nameLabel" destination="FA9-fv-cHs" id="ROP-Ih-WE1"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
