@@ -15,12 +15,17 @@ class FishingVC: UIViewController {
         super.viewDidLoad()
     }
     
-    func showFishes(){
-        
+    func showFishes(index: Int){
+        //fish region
+        if let fisheriesRegion = FisheriesRegion(rawValue: index) {
+            print(fisheriesRegion.region())
+        }
     }
     @IBAction func goButton(_ sender: Any) {
-        print(fisheriesPicker.selectedRow(inComponent: 0))
-        showFishes()
+//        print(fisheriesPicker.selectedRow(inComponent: 0))
+        var index: Int = fisheriesPicker.selectedRow(inComponent: 0)
+        print(index)
+        showFishes(index: index)
     }
 }
 

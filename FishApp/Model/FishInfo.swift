@@ -15,8 +15,9 @@ class FishInfo {
     }
     func fishes(for region: FisheriesRegion) -> [Fish] {
         let filtered = fishs.filter{
-            var curArr = String($0.fisheries)
-            curArr.contains(region)
+            var curArr:NSString = $0.fisheries.description as NSString
+            
+            return curArr.contains(region.region())
         }
         print(filtered)
         return filtered
