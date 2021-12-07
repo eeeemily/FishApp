@@ -28,12 +28,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let tabController = window?.rootViewController as? UITabBarController {
             if let vc = tabController.viewControllers?.first as? FishTVC{ //has to be the first in all tab bar choices
                 vc.fishInfo = fishInfo
-                print("new!")
+                print("fishTVC!")
             }
             if let vc = tabController.viewControllers?.last as? FishingVC{ //has to be the first in all tab bar choices
                 vc.fishInfo = fishInfo
-                print("new!")
+                print("Fishing VC!")
             }
+//            if let vc = tabController.viewControllers?[tabController.viewControllers?.count-3] as? CookingVC{ //has to be the first in all tab bar choices
+//                vc.fishInfo = fishInfo
+//                print("Cooking VC!")
+//            }
         }
         }
     

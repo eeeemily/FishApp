@@ -28,7 +28,8 @@
 		6AC0DB86275EB2D600FF97B8 /* Bottom2Top.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB85275EB2D600FF97B8 /* Bottom2Top.swift */; };
 		6AC0DB89275EB4C400FF97B8 /* FishingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB88275EB4C400FF97B8 /* FishingVC.swift */; };
 		6AC0DB8B275EB72E00FF97B8 /* FisheriesRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB8A275EB72E00FF97B8 /* FisheriesRegion.swift */; };
-		6AC0DB8D275F12EA00FF97B8 /* RandomFishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB8C275F12EA00FF97B8 /* RandomFishVC.swift */; };
+		6AC0DB90275F21A100FF97B8 /* CookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB8F275F21A100FF97B8 /* CookingVC.swift */; };
+		6AC0DB93275F21D700FF97B8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB92275F21D700FF97B8 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,8 @@
 		6AC0DB85275EB2D600FF97B8 /* Bottom2Top.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bottom2Top.swift; sourceTree = "<group>"; };
 		6AC0DB88275EB4C400FF97B8 /* FishingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishingVC.swift; sourceTree = "<group>"; };
 		6AC0DB8A275EB72E00FF97B8 /* FisheriesRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FisheriesRegion.swift; sourceTree = "<group>"; };
-		6AC0DB8C275F12EA00FF97B8 /* RandomFishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFishVC.swift; sourceTree = "<group>"; };
+		6AC0DB8F275F21A100FF97B8 /* CookingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingVC.swift; sourceTree = "<group>"; };
+		6AC0DB92275F21D700FF97B8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,8 @@
 		6A415929275DC7890038D60C /* FishApp */ = {
 			isa = PBXGroup;
 			children = (
+				6AC0DB91275F21C300FF97B8 /* Home */,
+				6AC0DB8E275F218200FF97B8 /* CookFish */,
 				6AC0DB87275EB36D00FF97B8 /* GoFishing */,
 				6AC0DB80275EB2A800FF97B8 /* Segues */,
 				6A41594F275DE04E0038D60C /* Model */,
@@ -174,9 +178,24 @@
 			isa = PBXGroup;
 			children = (
 				6AC0DB88275EB4C400FF97B8 /* FishingVC.swift */,
-				6AC0DB8C275F12EA00FF97B8 /* RandomFishVC.swift */,
 			);
 			path = GoFishing;
+			sourceTree = "<group>";
+		};
+		6AC0DB8E275F218200FF97B8 /* CookFish */ = {
+			isa = PBXGroup;
+			children = (
+				6AC0DB8F275F21A100FF97B8 /* CookingVC.swift */,
+			);
+			path = CookFish;
+			sourceTree = "<group>";
+		};
+		6AC0DB91275F21C300FF97B8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6AC0DB92275F21D700FF97B8 /* HomeVC.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,14 +269,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC0DB89275EB4C400FF97B8 /* FishingVC.swift in Sources */,
+				6AC0DB93275F21D700FF97B8 /* HomeVC.swift in Sources */,
 				6A415944275DCC450038D60C /* FishVC.swift in Sources */,
-				6AC0DB8D275F12EA00FF97B8 /* RandomFishVC.swift in Sources */,
 				6A415942275DCB110038D60C /* FishDecode.swift in Sources */,
 				6A415940275DCB010038D60C /* FishHelper.swift in Sources */,
 				6AC0DB84275EB2C300FF97B8 /* Right2LeftSegue.swift in Sources */,
 				6A41594E275DE0290038D60C /* SwiftJSON.swift in Sources */,
 				6A415951275DE0AC0038D60C /* Fish.swift in Sources */,
 				6A41592B275DC7890038D60C /* AppDelegate.swift in Sources */,
+				6AC0DB90275F21A100FF97B8 /* CookingVC.swift in Sources */,
 				6AC0DB86275EB2D600FF97B8 /* Bottom2Top.swift in Sources */,
 				6A41592D275DC7890038D60C /* SceneDelegate.swift in Sources */,
 				6A41594A275DD8AB0038D60C /* FishCell.swift in Sources */,

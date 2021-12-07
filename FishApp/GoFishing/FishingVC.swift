@@ -9,24 +9,63 @@ import UIKit
 
 class FishingVC: UIViewController {
     @IBOutlet weak var fisheriesPicker: UIPickerView!
+    @IBOutlet weak var goButton: UIButton!
+    @IBOutlet weak var askLabel: UILabel!
+    @IBOutlet weak var randomFishImgView: UIImageView!
+    @IBOutlet weak var redoButton: UIButton!
+    @IBOutlet weak var fishingManImgView: UIImageView!
     var fishInfo: FishInfo!
-    
+    let imageHelper = ImageHelper()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        redoButton.isHidden = true
+        fishingManImgView.isHidden = true
     }
     
     func showFishes(index: Int){
-        //fish region
-        if let fisheriesRegion = FisheriesRegion(rawValue: index) {
-            print("fish region?",fisheriesRegion.region())
-            fishInfo.fishes(for: fisheriesRegion.region())
+        if let fisheriesRegion = FisheriesRegion(rawValue: index) {            fishInfo.fishes(for: fisheriesRegion.region())
         }
     }
     @IBAction func goButton(_ sender: Any) {
-//        print(fisheriesPicker.selectedRow(inComponent: 0))
+        askLabel.isHidden = true
+        fisheriesPicker.isHidden = true
+        goButton.isHidden = true
+
         var index: Int = fisheriesPicker.selectedRow(inComponent: 0)
-        print("index",index)
         showFishes(index: index)
+        randomFishImgView.isHidden = false
+        fishingManImgView.isHidden = false
+
+        fetchFish(urlString: fishInfo.randomFishPic())//seem to show a few fish before generating?
+        randomFishImgView.isHidden = false
+        redoButton.isHidden = false
+    }
+    
+    @IBAction func redoButton(_ sender: Any) {
+        askLabel.isHidden = false
+        fisheriesPicker.isHidden = false
+        goButton.isHidden = false
+        redoButton.isHidden = true
+        randomFishImgView.isHidden = true
+        fishingManImgView.isHidden = true
+
+    }
+    
+    func fetchFish(urlString: String){
+        imageHelper.fetchImage(url: urlString) { result in
+            switch result {
+            case let .Success(image):
+                OperationQueue.main.addOperation() {
+                    self.randomFishImgView?.image = image
+                }
+            case let .Failure(error):
+                OperationQueue.main.addOperation {
+                    self.randomFishImgView?.image = nil
+                }
+                print("error: \(error)")
+            }
+        }
     }
 }
 

@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you want to go fishing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-nt-ryc">
-                                <rect key="frame" x="57" y="284" width="301" height="21"/>
+                                <rect key="frame" x="63" y="245" width="301" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -77,70 +77,67 @@
                                 <state key="normal" title="Let's go!"/>
                                 <connections>
                                     <action selector="goButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="aTb-Oi-Dez"/>
-                                    <segue destination="Jh5-oH-IT8" kind="presentation" customClass="Left2RightSegue" customModule="FishApp" customModuleProvider="target" modalPresentationStyle="pageSheet" id="Aab-Ro-bxK"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-uj-tKo">
+                                <rect key="frame" x="87" y="338" width="240" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="3G4-hd-w4x"/>
+                                    <constraint firstAttribute="width" constant="240" id="9lR-9M-xWC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woK-ve-9hk">
+                                <rect key="frame" x="149.5" y="708" width="115" height="30"/>
+                                <state key="normal" title="Get another fish!"/>
+                                <connections>
+                                    <action selector="redoButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="UPk-K7-JG3"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fishing" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-xf-ARL">
+                                <rect key="frame" x="87" y="159" width="277" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="76f-y7-lrx"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="woK-ve-9hk" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="How-7P-e7G"/>
+                            <constraint firstItem="OKz-uj-tKo" firstAttribute="centerY" secondItem="76f-y7-lrx" secondAttribute="centerY" id="Ugg-Bd-sHk"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="bottom" secondItem="woK-ve-9hk" secondAttribute="bottom" constant="75" id="VYg-Co-vIM"/>
+                            <constraint firstItem="OKz-uj-tKo" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="dnJ-4Y-rwj"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="vEe-0M-lAl"/>
                     <navigationItem key="navigationItem" id="Qpy-mx-eaA"/>
                     <connections>
+                        <outlet property="askLabel" destination="Q8E-nt-ryc" id="BOo-Fu-Ti7"/>
                         <outlet property="fisheriesPicker" destination="CO2-8C-bWb" id="61O-ai-GS5"/>
+                        <outlet property="fishingManImgView" destination="XaL-xf-ARL" id="34Z-X4-GRQ"/>
+                        <outlet property="goButton" destination="oLe-Nh-kgO" id="zrf-ef-gMF"/>
+                        <outlet property="randomFishImgView" destination="OKz-uj-tKo" id="aqi-ra-0bP"/>
+                        <outlet property="redoButton" destination="woK-ve-9hk" id="Dq2-UE-YeZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHc-Ze-sFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1949" y="-80"/>
-        </scene>
-        <!--Random FishVC-->
-        <scene sceneID="miU-0w-fiZ">
-            <objects>
-                <viewController id="Jh5-oH-IT8" customClass="RandomFishVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9hU-oU-MYy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="who-sr-rYi">
-                                <rect key="frame" x="49" y="63" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start a new Trip"/>
-                                <connections>
-                                    <segue destination="0Qf-4D-pgJ" kind="custom" customClass="Right2LeftSegue" customModule="FishApp" customModuleProvider="target" id="0rd-Vp-C1O"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KmZ-Jl-qyo">
-                                <rect key="frame" x="87" y="398" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="Ru8-vC-NAg"/>
-                                    <constraint firstAttribute="height" constant="128" id="Vy3-Gp-Xu0"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QTW-YE-phY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
-                        <constraints>
-                            <constraint firstItem="KmZ-Jl-qyo" firstAttribute="centerX" secondItem="QTW-YE-phY" secondAttribute="centerX" id="1id-Ro-yyz"/>
-                            <constraint firstItem="KmZ-Jl-qyo" firstAttribute="top" secondItem="QTW-YE-phY" secondAttribute="top" constant="398" id="pcV-HB-e3u"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="fdG-2E-04N"/>
-                    <connections>
-                        <outlet property="RandomFishIMg" destination="KmZ-Jl-qyo" id="Cg9-5G-JqT"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2fh-Ah-kdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3407" y="-80"/>
+            <point key="canvasLocation" x="2598.5507246376815" y="-277.23214285714283"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="jcU-BW-rV3">
             <objects>
-                <viewController id="Nsm-NU-hx9" sceneMemberID="viewController">
+                <viewController id="Nsm-NU-hx9" customClass="HomeVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDE-iR-vZJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-r9-CwX">
+                                <rect key="frame" x="186" y="332" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bSj-Xi-cKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -148,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nk-td-08l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1890" y="-779"/>
+            <point key="canvasLocation" x="1312" y="-115"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Q3d-UK-iUy">
@@ -162,12 +159,75 @@
                     <connections>
                         <segue destination="6jL-k9-Gw3" kind="relationship" relationship="viewControllers" id="uRv-bR-deZ"/>
                         <segue destination="ieU-Ov-FFp" kind="relationship" relationship="viewControllers" id="yXf-El-xWd"/>
-                        <segue destination="0Qf-4D-pgJ" kind="relationship" relationship="viewControllers" id="qw3-Nv-U8u"/>
+                        <segue destination="Nsm-NU-hx9" kind="relationship" relationship="viewControllers" id="owI-cc-8ab"/>
+                        <segue destination="jDQ-YN-aM3" kind="relationship" relationship="viewControllers" id="dXI-4H-RiF"/>
+                        <segue destination="0Qf-4D-pgJ" kind="relationship" relationship="viewControllers" id="dRO-H3-mkE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="guR-mg-q2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="-599"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="I3H-Rj-BVL">
+            <objects>
+                <viewController id="jDQ-YN-aM3" customClass="CookingVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cTU-qf-HOq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cook Fish" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv2-79-RCs">
+                                <rect key="frame" x="169" y="455" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cookin" translatesAutoresizingMaskIntoConstraints="NO" id="UgY-2d-saR">
+                                <rect key="frame" x="42" y="318" width="372" height="221"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="Yu2-Lv-vN6"/>
+                                    <constraint firstAttribute="width" constant="372" id="fO1-Iv-GUj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="container" translatesAutoresizingMaskIntoConstraints="NO" id="fHz-aw-mxI">
+                                <rect key="frame" x="20" y="345" width="374" height="241"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="UmL-tW-boc"/>
+                                    <constraint firstAttribute="height" constant="241" id="s47-vW-2aN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bad-So-Nsm">
+                                <rect key="frame" x="87" y="401" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="LA8-zW-HnI"/>
+                                    <constraint firstAttribute="height" constant="128" id="qPE-hE-gKF"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="14r-mN-Na4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UgY-2d-saR" firstAttribute="leading" secondItem="14r-mN-Na4" secondAttribute="leading" constant="42" id="4vn-Vi-rML"/>
+                            <constraint firstItem="bad-So-Nsm" firstAttribute="leading" secondItem="14r-mN-Na4" secondAttribute="leading" constant="87" id="PrA-w0-ghM"/>
+                            <constraint firstItem="UgY-2d-saR" firstAttribute="centerY" secondItem="14r-mN-Na4" secondAttribute="centerY" id="UpZ-AJ-xP1"/>
+                            <constraint firstItem="bad-So-Nsm" firstAttribute="top" secondItem="14r-mN-Na4" secondAttribute="top" constant="357" id="fsP-Ux-1A3"/>
+                            <constraint firstItem="fHz-aw-mxI" firstAttribute="top" secondItem="14r-mN-Na4" secondAttribute="top" constant="301" id="gpK-eM-VBe"/>
+                            <constraint firstItem="14r-mN-Na4" firstAttribute="trailing" secondItem="bad-So-Nsm" secondAttribute="trailing" constant="87" id="haB-FE-iSd"/>
+                            <constraint firstItem="fHz-aw-mxI" firstAttribute="leading" secondItem="14r-mN-Na4" secondAttribute="leading" constant="20" id="kou-Zb-hda"/>
+                            <constraint firstItem="14r-mN-Na4" firstAttribute="trailing" secondItem="UgY-2d-saR" secondAttribute="trailing" id="ylL-qF-jGC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="J2C-jS-DzP"/>
+                    <connections>
+                        <outlet property="containerImgView" destination="fHz-aw-mxI" id="LB5-D9-OGz"/>
+                        <outlet property="fishImageView" destination="bad-So-Nsm" id="IYj-0e-hj6"/>
+                        <outlet property="panImgView" destination="UgY-2d-saR" id="1DL-mV-e0g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gR7-6A-KSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="-783.48214285714278"/>
         </scene>
         <!--Item-->
         <scene sceneID="Y5Z-Vf-qlc">
@@ -295,18 +355,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOE-bR-XR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="143"/>
+            <point key="canvasLocation" x="586" y="203"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="0rd-Vp-C1O"/>
-    </inferredMetricsTieBreakers>
     <resources>
+        <image name="container" width="266.5" height="213.5"/>
+        <image name="cookin" width="111.5" height="83.5"/>
+        <image name="fishing" width="320" height="216"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
