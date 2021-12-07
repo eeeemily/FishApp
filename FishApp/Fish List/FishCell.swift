@@ -19,6 +19,7 @@ class FishCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
 
     func update(name: String, protein: String,quote:String,fisheries:String, pic:String) {
         nameLabel?.text = name

@@ -3,7 +3,7 @@
 //  FishApp
 //
 //  Created by Zheng, Minghui on 12/6/21.
-// populate tv: https://www.codementor.io/@brettr/two-basic-ways-to-populate-your-uitableview-du107rsyx
+// tvc swipe action: https://programmingwithswift.com/uitableviewcell-swipe-actions-with-swift/
 
 import Foundation
 import UIKit
@@ -14,10 +14,54 @@ class FishTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+      
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        
+//        if UserDefaults.standard.bool(forKey: "dShowDailyTip") {
+            let alert = UIAlertController(title: "Tip of the Day", message: "Try swiping right 🤪", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(alert, animated:  true)
+//        }
+    }
+    //fav
+    private func handleMarkAsFavourite() {
+        print("Marked as favourite")
+        deletionAlert(title: "hey", completion: { _ in
+            print("hello?")
+        })    }
+    override func tableView(_ tableView: UITableView,
+                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal,
+                                        title: "Favourite") { [weak self] (action, view, completionHandler) in
+                                            self?.handleMarkAsFavourite()
+                                            completionHandler(true)
+        }
+        action.backgroundColor = .systemBlue
+        return UISwipeActionsConfiguration(actions: [action])
 
-    
+    }
+    override func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    func deletionAlert(title: String, completion: @escaping (UIAlertAction) -> Void) {
+        let alertMsg = "Are you sure you want to save it as your favorite \(title)?"
+        let alert = UIAlertController(title: "Choosing your Fish!", message: alertMsg, preferredStyle: .actionSheet)
+        
+        let deleteAction = UIAlertAction(title: "Save to Bookmark", style: .default, handler: completion)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+        
+        alert.popoverPresentationController?.permittedArrowDirections = []
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRect(x: self.view.frame.midX, y: self.view.frame.midY, width: 0, height: 0)
+        
+        present(alert, animated: true, completion: nil)
+    }
     
     // MARK: - Table view data source
     
@@ -25,6 +69,16 @@ class FishTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fishInfo.fishs.count
     }
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            if let fish = fishInfo?.fishs[indexPath.row] as Fish? {
+//                deletionAlert(title: "hey", completion: { _ in
+////                    self.deleteEntry(entry: entry)
+//                    print("hello")
+//                })
+//            }
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
