@@ -51,7 +51,6 @@
         <!--Item 2-->
         <scene sceneID="PHI-Lz-EVw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JHc-Ze-sFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="0Qf-4D-pgJ" customClass="FishingVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w57-RV-zpo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -91,13 +90,14 @@
                         <outlet property="fisheriesPicker" destination="CO2-8C-bWb" id="61O-ai-GS5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHc-Ze-sFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949" y="-80"/>
         </scene>
-        <!--View Controller-->
+        <!--Random FishVC-->
         <scene sceneID="miU-0w-fiZ">
             <objects>
-                <viewController id="Jh5-oH-IT8" sceneMemberID="viewController">
+                <viewController id="Jh5-oH-IT8" customClass="RandomFishVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9hU-oU-MYy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,15 +110,29 @@
                                     <segue destination="0Qf-4D-pgJ" kind="custom" customClass="Right2LeftSegue" customModule="FishApp" customModuleProvider="target" id="0rd-Vp-C1O"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KmZ-Jl-qyo">
+                                <rect key="frame" x="87" y="398" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Ru8-vC-NAg"/>
+                                    <constraint firstAttribute="height" constant="128" id="Vy3-Gp-Xu0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QTW-YE-phY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="KmZ-Jl-qyo" firstAttribute="centerX" secondItem="QTW-YE-phY" secondAttribute="centerX" id="1id-Ro-yyz"/>
+                            <constraint firstItem="KmZ-Jl-qyo" firstAttribute="top" secondItem="QTW-YE-phY" secondAttribute="top" constant="398" id="pcV-HB-e3u"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fdG-2E-04N"/>
+                    <connections>
+                        <outlet property="RandomFishIMg" destination="KmZ-Jl-qyo" id="Cg9-5G-JqT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fh-Ah-kdR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="-80"/>
+            <point key="canvasLocation" x="3407" y="-80"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="jcU-BW-rV3">
