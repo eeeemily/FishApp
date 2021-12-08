@@ -8,6 +8,7 @@
 // transition from one image to another https://programmingwithswift.com/animate-image-change-with-swift/
 // interesting progress bar https://guides.codepath.com/ios/Animating-A-Sequence-of-Images
 // another cool anim and transitionhttps://developer.apple.com/tutorials/swiftui/animating-views-and-transitions
+// remove all subView from View: https://stackoverflow.com/questions/24312760/how-to-remove-all-subviews-of-a-view-in-swift
 
 import UIKit
 
@@ -21,6 +22,7 @@ class FishingVC: UIViewController {
     @IBOutlet var fishingFishLabel: UILabel!
     @IBOutlet var fishingFishProtein: UILabel!
     @IBOutlet weak var fishingFishRegion: UILabel!
+    @IBOutlet weak var oceanView: UIView!
     var fishInfo: FishInfo!
     var randomFisheryFish: Fish!
     let imageHelper = ImageHelper()
@@ -39,6 +41,7 @@ class FishingVC: UIViewController {
         hideFishInfo()
         redoButton.isHidden = true
         fishingManImgView.isHidden = true
+        oceanView.isHidden = true
     }
     
     func showFishes(index: Int){
@@ -62,6 +65,7 @@ class FishingVC: UIViewController {
         randomFishImgView.isHidden = false
         animFish()//animation
         redoButton.isHidden = false
+        oceanView.isHidden = false
     }
     
     @IBAction func redoButton(_ sender: Any) {
@@ -72,7 +76,11 @@ class FishingVC: UIViewController {
         randomFishImgView.isHidden = true
         fishingManImgView.isHidden = true
         hideFishInfo()
+        oceanView.isHidden = true
 
+        for view in oceanView.subviews {
+            view.removeFromSuperview()
+        }
     }
     func hideFishInfo(){
         fishingFishLabel.isHidden = true
@@ -84,6 +92,44 @@ class FishingVC: UIViewController {
         fishingFishProtein.isHidden = false
         fishingFishRegion.isHidden = false
     }
+    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        let url = URL(string: curRanFish.pic)
+        let data = try? Data(contentsOf: url!)
+//        imageView.image = UIImage(data: data!)
+        let newFish = UIImageView(image: UIImage(data: data!))
+        let height = 100/oceanView.frame.size.width * (newFish.image?.size.height)! //doesn't work tho?
+        newFish.frame = CGRect(x: 0,y: 0,width: 120, height: height)
+        newFish.center = CGPoint(x: sender.location(in: oceanView).x, y: sender.location(in: oceanView).y)
+
+        //add the new view via transition
+        UIView.transition(with: oceanView,
+          duration: 0.33,
+          options: [.curveEaseOut],
+          animations: {
+            self.oceanView.addSubview(newFish)
+          },
+          completion: nil
+        )
+    }
+//    func fetchTapFishPic()->UIImageView{
+//        let urlString = curRanFish.pic
+//        imageHelper.fetchImage(url: urlString) { result in
+//            switch result {
+//            case let .Success(image):
+//                return UIImageView(image: image)!
+////                OperationQueue.main.addOperation() {
+////
+////                    self.randomFishImgView?.image = image
+////                }
+//            case let .Failure(error):
+////                OperationQueue.main.addOperation {
+////                    self.randomFishImgView?.image = nil
+////                }
+//                return UIImageView(image: UIImage(named: "logo"))!
+//                print("error: \(error)")
+//            }
+//        }
+//    }
     @IBAction func onLongPress(_ sender: UILongPressGestureRecognizer) {
         fishingFishLabel.text = curRanFish.name
         fishingFishProtein.text = curRanFish.protein
@@ -105,6 +151,7 @@ class FishingVC: UIViewController {
                 print("error: \(error)")
             }
         }
+        
     }
     func animFish(){
         rotateMan()

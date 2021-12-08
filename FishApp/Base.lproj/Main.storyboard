@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-8C-bWb">
-                                <rect key="frame" x="63" y="356" width="288" height="144"/>
+                                <rect key="frame" x="63" y="356" width="320" height="144"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="144" id="QaF-kg-cjy"/>
                                 </constraints>
@@ -73,17 +73,10 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Nh-kgO">
-                                <rect key="frame" x="153" y="626" width="108" height="30"/>
+                                <rect key="frame" x="153" y="626" width="140" height="30"/>
                                 <state key="normal" title="Let's go!"/>
                                 <connections>
                                     <action selector="goButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="aTb-Oi-Dez"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woK-ve-9hk">
-                                <rect key="frame" x="149.5" y="708" width="115" height="30"/>
-                                <state key="normal" title="Get another fish!"/>
-                                <connections>
-                                    <action selector="redoButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="UPk-K7-JG3"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fishing" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-xf-ARL">
@@ -132,25 +125,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mi7-CO-sEo">
+                                <rect key="frame" x="0.0" y="273" width="414" height="540"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.051906587849999998" green="0.2867881109" blue="0.33199905730000001" alpha="0.52123193030000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Dp7-XK-om2" appends="YES" id="LbM-Pz-C9j"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woK-ve-9hk">
+                                <rect key="frame" x="28" y="150" width="115" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Get another fish!"/>
+                                <connections>
+                                    <action selector="redoButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="UPk-K7-JG3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="76f-y7-lrx"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="oLe-Nh-kgO" secondAttribute="centerX" id="0zX-gT-eiL"/>
-                            <constraint firstItem="woK-ve-9hk" firstAttribute="top" secondItem="8V4-t9-pVk" secondAttribute="bottom" constant="8" symbolic="YES" id="23y-j8-8kS"/>
                             <constraint firstItem="8V4-t9-pVk" firstAttribute="top" secondItem="IIY-cA-KCR" secondAttribute="bottom" constant="8" symbolic="YES" id="2EK-WM-iuD"/>
                             <constraint firstItem="8V4-t9-pVk" firstAttribute="top" secondItem="IIY-cA-KCR" secondAttribute="bottom" constant="8" symbolic="YES" id="3RF-6k-y1p"/>
                             <constraint firstItem="oLe-Nh-kgO" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="153" id="8pa-Oi-Xc4"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="87" id="9la-eT-rLl"/>
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="top" secondItem="XaL-xf-ARL" secondAttribute="bottom" constant="5" id="DrN-pX-l81"/>
-                            <constraint firstItem="woK-ve-9hk" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="How-7P-e7G"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="9Vq-cx-r0h" secondAttribute="trailing" constant="35" id="IYl-ZF-Jfk"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="IIY-cA-KCR" secondAttribute="trailing" constant="35" id="J8u-ZM-e0R"/>
-                            <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="woK-ve-9hk" secondAttribute="centerX" id="TpK-yt-P0o"/>
-                            <constraint firstItem="76f-y7-lrx" firstAttribute="bottom" secondItem="woK-ve-9hk" secondAttribute="bottom" constant="75" id="VYg-Co-vIM"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="bottom" secondItem="oLe-Nh-kgO" secondAttribute="bottom" constant="157" id="UOa-ZM-9ps"/>
                             <constraint firstItem="8V4-t9-pVk" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="48" id="Vj8-sS-L0e"/>
-                            <constraint firstItem="woK-ve-9hk" firstAttribute="top" secondItem="oLe-Nh-kgO" secondAttribute="bottom" constant="52" id="Wyo-sD-fD0"/>
+                            <constraint firstItem="oLe-Nh-kgO" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="34" id="Yq7-Vg-H9n"/>
                             <constraint firstItem="IIY-cA-KCR" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="25" id="b6b-e2-4jK"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="8V4-t9-pVk" secondAttribute="trailing" constant="35" id="bSc-D8-8dG"/>
                             <constraint firstItem="IIY-cA-KCR" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="25" id="boO-PE-kKn"/>
@@ -178,6 +185,7 @@
                         <outlet property="fishingFishRegion" destination="8V4-t9-pVk" id="16b-xL-o8t"/>
                         <outlet property="fishingManImgView" destination="XaL-xf-ARL" id="34Z-X4-GRQ"/>
                         <outlet property="goButton" destination="oLe-Nh-kgO" id="zrf-ef-gMF"/>
+                        <outlet property="oceanView" destination="mi7-CO-sEo" id="8FE-3g-mh4"/>
                         <outlet property="randomFishImgView" destination="OKz-uj-tKo" id="aqi-ra-0bP"/>
                         <outlet property="redoButton" destination="woK-ve-9hk" id="Dq2-UE-YeZ"/>
                     </connections>
@@ -188,6 +196,11 @@
                         <action selector="onLongPress:" destination="0Qf-4D-pgJ" id="c3S-J6-Rf9"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <tapGestureRecognizer id="Dp7-XK-om2">
+                    <connections>
+                        <action selector="onTap:" destination="0Qf-4D-pgJ" id="tsH-gq-XNE"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2598.5507246376815" y="-277.23214285714283"/>
         </scene>
