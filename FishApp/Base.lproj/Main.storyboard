@@ -16,9 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where do you want to go fishing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-nt-ryc">
-                                <rect key="frame" x="63" y="244.5" width="301" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Where do you want to go fishing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-nt-ryc">
+                                <rect key="frame" x="48" y="245" width="316" height="66"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,8 +32,9 @@
                                     <outlet property="delegate" destination="0Qf-4D-pgJ" id="4vG-PX-UiN"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Nh-kgO">
-                                <rect key="frame" x="153" y="626" width="140" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Nh-kgO">
+                                <rect key="frame" x="48" y="619" width="316" height="37"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                 <state key="normal" title="Let's go!"/>
                                 <connections>
                                     <action selector="goButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="aTb-Oi-Dez"/>
@@ -53,7 +54,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kaljdlkjlak fish" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-cx-r0h">
-                                <rect key="frame" x="48" y="567" width="331" height="25"/>
+                                <rect key="frame" x="48" y="560" width="331" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="331" id="7fS-qf-PoM"/>
                                     <constraint firstAttribute="height" constant="25" id="svS-Dw-Fpr"/>
@@ -64,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein: hello" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIY-cA-KCR">
-                                <rect key="frame" x="48" y="617" width="331" height="25"/>
+                                <rect key="frame" x="48" y="610" width="331" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="Wy6-j1-IC5"/>
                                     <constraint firstAttribute="width" constant="331" id="dit-Xy-hsb"/>
@@ -75,7 +76,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region: Greater Alantickjlj" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V4-t9-pVk">
-                                <rect key="frame" x="48" y="650" width="331" height="50"/>
+                                <rect key="frame" x="48" y="643" width="331" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="14g-bo-N7V"/>
                                     <constraint firstAttribute="width" constant="331" id="2Fz-lz-RsK"/>
@@ -95,9 +96,12 @@
                                 </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woK-ve-9hk">
-                                <rect key="frame" x="28" y="150" width="115" height="30"/>
+                                <rect key="frame" x="32" y="159" width="205" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Get another fish!"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
+                                <state key="normal" title="Get another fish!">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="redoButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="UPk-K7-JG3"/>
                                 </connections>
@@ -144,6 +148,7 @@
                         <outlet property="fishingFishProtein" destination="IIY-cA-KCR" id="EOw-Db-FWo"/>
                         <outlet property="fishingFishRegion" destination="8V4-t9-pVk" id="16b-xL-o8t"/>
                         <outlet property="fishingManImgView" destination="XaL-xf-ARL" id="34Z-X4-GRQ"/>
+                        <outlet property="getFishBtn" destination="woK-ve-9hk" id="Ico-0J-UQk"/>
                         <outlet property="goButton" destination="oLe-Nh-kgO" id="zrf-ef-gMF"/>
                         <outlet property="oceanView" destination="mi7-CO-sEo" id="8FE-3g-mh4"/>
                         <outlet property="randomFishImgView" destination="OKz-uj-tKo" id="aqi-ra-0bP"/>
@@ -172,37 +177,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOE-r9-CwX">
-                                <rect key="frame" x="186" y="332" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-UU-RKJ">
-                                <rect key="frame" x="91" y="443" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZg-ih-RBd">
-                                <rect key="frame" x="241" y="443" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZg-ih-RBd">
+                                <rect key="frame" x="273" y="451" width="49" height="31"/>
                                 <connections>
                                     <action selector="onDarkMode:" destination="Nsm-NU-hx9" eventType="valueChanged" id="ne2-Ub-COX"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Instruction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-NJ-WPh">
-                                <rect key="frame" x="69" y="535" width="128" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Show Instruction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-NJ-WPh">
+                                <rect key="frame" x="55" y="536" width="245" height="25"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-gX-qIX">
-                                <rect key="frame" x="241" y="530" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-UU-RKJ">
+                                <rect key="frame" x="55" y="456" width="113.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-gX-qIX">
+                                <rect key="frame" x="273" y="530" width="49" height="31"/>
                                 <connections>
                                     <action selector="onShownInstruction:" destination="Nsm-NU-hx9" eventType="valueChanged" id="oTW-7P-D4V"/>
                                 </connections>
@@ -210,16 +204,28 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bSj-Xi-cKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="leading" secondItem="bSj-Xi-cKS" secondAttribute="leading" constant="55" id="0a9-RO-6Kc"/>
+                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="trailing" secondItem="IZg-ih-RBd" secondAttribute="trailing" constant="94" id="D0v-Xh-Wc1"/>
+                            <constraint firstItem="IZg-ih-RBd" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="407" id="NKs-sO-HZM"/>
+                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="bottom" secondItem="2Fb-NJ-WPh" secondAttribute="bottom" constant="252" id="Odm-SN-gst"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="412" id="RP8-1Z-i9a"/>
+                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="bottom" secondItem="ek6-gX-qIX" secondAttribute="bottom" constant="252" id="e2d-Fs-EWe"/>
+                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="trailing" secondItem="ek6-gX-qIX" secondAttribute="trailing" constant="94" id="mfw-jV-gJb"/>
+                            <constraint firstItem="2Fb-NJ-WPh" firstAttribute="leading" secondItem="bSj-Xi-cKS" secondAttribute="leading" constant="55" id="z7i-ut-8Dy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="setting2" selectedImage="setting2" id="CwW-QA-Yce"/>
                     <connections>
+                        <outlet property="darkModeLabel" destination="HtK-UU-RKJ" id="U3g-Yc-vCY"/>
                         <outlet property="onDarkModeSwitch" destination="IZg-ih-RBd" id="9iF-SM-Dof"/>
+                        <outlet property="showInstructionLabel" destination="2Fb-NJ-WPh" id="6cd-LY-BQP"/>
                         <outlet property="showInstructionSwitch" destination="ek6-gX-qIX" id="Dur-Tw-Yhr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nk-td-08l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1425" y="-90"/>
+            <point key="canvasLocation" x="1424.6376811594205" y="-90.401785714285708"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Q3d-UK-iUy">
@@ -418,13 +424,13 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Protein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd2-7E-JvS">
                                             <rect key="frame" x="71" y="195" width="279" height="58"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fisheries" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UK0-rz-DUO">
                                             <rect key="frame" x="71" y="245" width="272" height="60"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -440,7 +446,7 @@
                                                 <constraint firstAttribute="width" constant="271" id="6vc-pk-aTC"/>
                                                 <constraint firstAttribute="height" constant="151" id="bde-IC-6WG"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

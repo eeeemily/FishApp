@@ -27,12 +27,14 @@ class FishingVC: UIViewController {
     var randomFisheryFish: Fish!
     let imageHelper = ImageHelper()
     var curRanFish: Fish!
+    @IBOutlet weak var getFishBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.tableView.separatorColor = UIColor(named: "yellowish")
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//
+        getFishBtn?.setTitle(NSLocalizedString("Get another fish!", comment: ""), for: .normal)
+        goButton?.setTitle(NSLocalizedString("Let's go!", comment: ""), for: .normal)
+        askLabel.text = NSLocalizedString("Where do you want to go for fishing?", comment: "")
 //        if UserDefaults.standard.bool(forKey: dDarkMode) {
 //            overrideUserInterfaceStyle = .dark
 //            self.view.backgroundColor = UIColor(named: "PrimaryColor")
@@ -42,8 +44,6 @@ class FishingVC: UIViewController {
 //        }
         goButton.tintColor = UIColor.white
         redoButton.tintColor = UIColor.white
-//        self.urlInputTextField.backgroundColor = UIColor(named: "PrimaryColor")
-//        self.urlInputTextField.textColor = UIColor.white
     }
     @objc func notificationReceived() {
         if UserDefaults.standard.bool(forKey: dDarkMode) {
@@ -132,25 +132,7 @@ class FishingVC: UIViewController {
           completion: nil
         )
     }
-//    func fetchTapFishPic()->UIImageView{
-//        let urlString = curRanFish.pic
-//        imageHelper.fetchImage(url: urlString) { result in
-//            switch result {
-//            case let .Success(image):
-//                return UIImageView(image: image)!
-////                OperationQueue.main.addOperation() {
-////
-////                    self.randomFishImgView?.image = image
-////                }
-//            case let .Failure(error):
-////                OperationQueue.main.addOperation {
-////                    self.randomFishImgView?.image = nil
-////                }
-//                return UIImageView(image: UIImage(named: "logo"))!
-//                print("error: \(error)")
-//            }
-//        }
-//    }
+
     @IBAction func onLongPress(_ sender: UILongPressGestureRecognizer) {
         fishingFishLabel.text = curRanFish.name
         fishingFishProtein.text = curRanFish.protein

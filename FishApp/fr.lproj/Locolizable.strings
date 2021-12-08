@@ -1,0 +1,15 @@
+/* 
+  Locolizable.strings
+  FishApp
+
+  Created by Zheng, Minghui on 12/8/21.
+  
+*/
+"Is this your favorite fish?" = "Est-ce votre poisson préféré ?";
+"Yes!" = "Oui!";
+"No😅" = "Non😅";
+"Show Instruction" = "Afficher les instructions";
+"Dark Mode" = "Mode sombre";
+"Get another fish!" = "Obtenez un autre poisson!";
+"Let's go!" = "Allons-y!";
+"Where do you want to go for fishing?" = "Où voulez-vous aller pêcher ?";

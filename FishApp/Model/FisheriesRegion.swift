@@ -25,19 +25,4 @@ enum FisheriesRegion: Int, CaseIterable{
             return "Pacific Islands"
         }
     }
-
-//    init(_ region: String){
-//        switch region{
-//            case "Alaska":
-//                self = .Alaska
-//            case "Greater Atlantic":
-//                self = .GreaterAtlantc
-//            case "West Coast":
-//                self = .WestCoast
-//            case "Southeast":
-//                self = .Southeast
-//            default: //"Pacific Islands":
-//                self = .PacificIslands
-//        }
-//    }
 }

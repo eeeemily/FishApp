@@ -30,6 +30,7 @@
 		6AC0DB93275F21D700FF97B8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB92275F21D700FF97B8 /* HomeVC.swift */; };
 		6ADD421F276022FE00DD5F30 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD421E276022FE00DD5F30 /* UIImageViewExtension.swift */; };
 		6ADD42212760231300DD5F30 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD42202760231300DD5F30 /* UIStackViewExtension.swift */; };
+		6ADD423427607F2100DD5F30 /* Locolizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6ADD423627607F2100DD5F30 /* Locolizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +59,8 @@
 		6AC0DB92275F21D700FF97B8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6ADD421E276022FE00DD5F30 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		6ADD42202760231300DD5F30 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
-		6ADD42282760793A00DD5F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
-		6ADD42292760793B00DD5F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6ADD423527607F2100DD5F30 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Locolizable.strings; sourceTree = "<group>"; };
+		6ADD423727607F2C00DD5F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Locolizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 				6A415935275DC78A0038D60C /* LaunchScreen.storyboard */,
 				6A415938275DC78A0038D60C /* Info.plist */,
 				6A41594D275DE0290038D60C /* SwiftJSON.swift */,
+				6ADD423627607F2100DD5F30 /* Locolizable.strings */,
 			);
 			path = FishApp;
 			sourceTree = "<group>";
@@ -245,6 +247,7 @@
 				6A415937275DC78A0038D60C /* LaunchScreen.storyboard in Resources */,
 				6A415934275DC78A0038D60C /* Assets.xcassets in Resources */,
 				6A415932275DC7890038D60C /* Main.storyboard in Resources */,
+				6ADD423427607F2100DD5F30 /* Locolizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +288,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				6A415931275DC7890038D60C /* Base */,
-				6ADD42282760793A00DD5F30 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -294,9 +296,17 @@
 			isa = PBXVariantGroup;
 			children = (
 				6A415936275DC78A0038D60C /* Base */,
-				6ADD42292760793B00DD5F30 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6ADD423627607F2100DD5F30 /* Locolizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6ADD423527607F2100DD5F30 /* en */,
+				6ADD423727607F2C00DD5F30 /* fr */,
+			);
+			name = Locolizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

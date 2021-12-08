@@ -25,9 +25,7 @@ class CookingVC: UIViewController {
     var prevFish: Fish!
     var fishingVC = FishingVC()
     let imageHelper = ImageHelper()
-//    init(){
-//        curFish = fetchFishPicToCook()
-//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadFishes()
@@ -58,13 +56,11 @@ class CookingVC: UIViewController {
     @IBAction func onHorizontalSwiipe(_ sender: UISwipeGestureRecognizer){
         switch sender.direction {
             case .left: //next
-//                print("left")
                 hideFishInfo()
                 prevFish = curFish
                 curFish = fetchFishPicToCook()
                 fetchFishPic(urlString: curFish.pic)
             case .right: //prev, future implementation: maybe can have prev few?
-//                print("right")
                 if((prevFish?.name) != nil){ //if there's a prev fish
                     hideFishInfo()
                     curFish = prevFish
@@ -78,7 +74,6 @@ class CookingVC: UIViewController {
         
     }
     @IBAction func onFishInfo(_ sender: UILongPressGestureRecognizer) {
-//        print("long pressed")
         cookingFishNameLabel.text = curFish.name
         cookingFishProteinLabel.text = curFish.protein
         cookingFishRegionLabel.text = curFish.fisheries
@@ -123,12 +118,8 @@ class CookingVC: UIViewController {
                  protein: fish["Protein"].stringValue,
                  quote: fish["Quote"].stringValue,
                  fisheries: fish["NOAA Fisheries Region"].stringValue, pic: fish["Species Illustration Photo"]["src"].stringValue)
-//            print("hello",fish["Species Illustration Photo"]["src"].stringValue)
-
 
         }
-//        print("second fish",fishInfo.fishs[indexPath.row].name)
-        print("fish count hellooo",cookingFish.fishs.count)
 
     }
 }

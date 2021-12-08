@@ -19,12 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         loadFishes()
-//        if let navController = window?.rootViewController as? UINavigationController{
-//            if let vc = navController.viewControllers.last as? FishTVC{
-//                vc.fishInfo = fishInfo
-//                print("new!")
-//            }
-//        }
+
         if let tabController = window?.rootViewController as? UITabBarController {
             if let vc = tabController.viewControllers?.first as? FishTVC{ //has to be the first in all tab bar choices
                 vc.fishInfo = fishInfo
@@ -34,10 +29,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 vc.fishInfo = fishInfo
                 print("Fishing VC!")
             }
-//            if let vc = tabController.viewControllers?[tabController.viewControllers?.count-3] as? CookingVC{ //has to be the first in all tab bar choices
-//                vc.fishInfo = fishInfo
-//                print("Cooking VC!")
-//            }
         }
         }
     
@@ -75,18 +66,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let fishInfoURL = URL(string: urlJSON) else { return }
         guard let contents = try? Data(contentsOf: fishInfoURL) else { return }
         let library = JSON(contents).arrayValue
-        
+    
         for fish in library {
             fishInfo.addFish(name: fish["Species Name"].stringValue,
                  protein: fish["Protein"].stringValue,
                  quote: fish["Quote"].stringValue,
                  fisheries: fish["NOAA Fisheries Region"].stringValue, pic: fish["Species Illustration Photo"]["src"].stringValue)
-//            print("hello",fish["Species Illustration Photo"]["src"].stringValue)
-
-
         }
-//        print("second fish",fishInfo.fishs[indexPath.row].name)
-        print("fish count",fishInfo.fishs.count)
 
     }
 }

@@ -52,11 +52,11 @@ class FishTVC: UITableViewController {
         return .none
     }
     func deletionAlert(title: String, completion: @escaping (UIAlertAction) -> Void) {
-        let alertMsg = "Are you sure you want to save it as your favorite \(title)?"
-        let alert = UIAlertController(title: "Choosing your Fish!", message: alertMsg, preferredStyle: .actionSheet)
+//        let alertMsg = "Are you sure you want to save it as your favorite \(title)?"
+        let alert = UIAlertController(title: NSLocalizedString("Is this your favorite fish?", comment: ""), message: nil, preferredStyle: .actionSheet)
         
-        let deleteAction = UIAlertAction(title: "Save to Bookmark", style: .default, handler: completion)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        let deleteAction = UIAlertAction(title: NSLocalizedString("Yes!", comment: ""), style: .default, handler: completion)
+        let cancelAction = UIAlertAction(title: NSLocalizedString("No😅", comment: ""), style: .cancel)
         
         alert.addAction(deleteAction)
         alert.addAction(cancelAction)
