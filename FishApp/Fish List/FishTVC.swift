@@ -25,7 +25,7 @@ class FishTVC: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         if UserDefaults.standard.bool(forKey: dShowInstruction) {
-            let alert = UIAlertController(title: "Tip of the Day", message: "Try swiping right 🤪", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Welcome to Fish App!", message: "You can learn about fishes here!🐟", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(alert, animated:  true)
         }

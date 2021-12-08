@@ -135,8 +135,8 @@ class FishingVC: UIViewController {
 
     @IBAction func onLongPress(_ sender: UILongPressGestureRecognizer) {
         fishingFishLabel.text = curRanFish.name
-        fishingFishProtein.text = curRanFish.protein
-        fishingFishRegion.text = curRanFish.fisheries
+        fishingFishProtein.text = "Protein: "+curRanFish.protein
+        fishingFishRegion.text = "Region: "+curRanFish.fisheries
         showFishInfo()
         
     }

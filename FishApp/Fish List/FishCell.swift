@@ -24,9 +24,9 @@ class FishCell: UITableViewCell {
 
     func update(name: String, protein: String,quote:String,fisheries:String, pic:String) {
         nameLabel?.text = name
-        proteinLabel?.text = protein
-        quoteLabel?.text = quote
-        fisheriesLabel?.text = fisheries
+        proteinLabel?.text = "Protein: "+protein
+        quoteLabel?.text = "About:con "+quote
+        fisheriesLabel?.text = "Region: "+fisheries
         loadPhoto(urlString: pic)
     }
     func loadPhoto(urlString: String){

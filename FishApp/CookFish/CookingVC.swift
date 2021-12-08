@@ -38,7 +38,7 @@ class CookingVC: UIViewController {
         cookingFishRegionLabel.isHidden = true
         fetchFishPic(urlString: curFish.pic)
         
-        overrideUserInterfaceStyle = .light
+//        overrideUserInterfaceStyle = .light
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
 
 //        
@@ -75,8 +75,8 @@ class CookingVC: UIViewController {
     }
     @IBAction func onFishInfo(_ sender: UILongPressGestureRecognizer) {
         cookingFishNameLabel.text = curFish.name
-        cookingFishProteinLabel.text = curFish.protein
-        cookingFishRegionLabel.text = curFish.fisheries
+        cookingFishProteinLabel.text = "Protein: "+curFish.protein
+        cookingFishRegionLabel.text = "Region: "+curFish.fisheries
         cookingFishNameLabel.isHidden = false
         cookingFishProteinLabel.isHidden = false
         cookingFishRegionLabel.isHidden = false
