@@ -4,6 +4,10 @@
 //
 //  Created by Zheng, Minghui on 12/6/21.
 //
+// cool animation: https://blog.devgenius.io/how-to-animate-your-images-in-swift-ios-swift-guide-64de30ea616b
+// transition from one image to another https://programmingwithswift.com/animate-image-change-with-swift/
+// interesting progress bar https://guides.codepath.com/ios/Animating-A-Sequence-of-Images
+// another cool anim and transitionhttps://developer.apple.com/tutorials/swiftui/animating-views-and-transitions
 
 import UIKit
 
@@ -19,6 +23,15 @@ class FishingVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        redoButton.isHidden = true
+//        fishingManImgView.isHidden = true
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        UIView.animate(withDuration: 2.4, animations: {
+//            self.randomFishImgView?.alpha = 1.0
+//        })
         redoButton.isHidden = true
         fishingManImgView.isHidden = true
     }
@@ -34,11 +47,12 @@ class FishingVC: UIViewController {
 
         var index: Int = fisheriesPicker.selectedRow(inComponent: 0)
         showFishes(index: index)
-        randomFishImgView.isHidden = false
+//        randomFishImgView.isHidden = false
         fishingManImgView.isHidden = false
 
         fetchFish(urlString: fishInfo.randomFishPic())//seem to show a few fish before generating?
         randomFishImgView.isHidden = false
+        animFish()//animation
         redoButton.isHidden = false
     }
     
@@ -67,8 +81,78 @@ class FishingVC: UIViewController {
             }
         }
     }
+    func animFish(){
+        rotateMan()
+        swimFish()
+//        moveFish()
+        
+    }
+    func rotateMan(){
+        UIView.animate(withDuration: 0.7, animations: {
+            self.fishingManImgView?.rotate(by: 0.5, with: CGPoint(x: 0, y: 0))
+        })
+        UIView.animate(withDuration: 0.7, animations: {
+            self.fishingManImgView?.rotate(by: -0.5, with: CGPoint(x: -0.5, y: 0.5))
+        }, completion: { _ in
+        
+            UIView.animate(withDuration: 0.7, animations: {
+                self.fishingManImgView?.rotate(by: 0, with: CGPoint(x: -0.5, y: 0.5))
+                
+            }, completion: { _ in
+               
+            })
+        })
+    }
+    func moveFish(){
+        UIView.animate(withDuration: 2.0) {
+  
+            self.randomFishImgView.transform = CGAffineTransform(translationX: 0, y: -80)
+        }
+    }
+    func swimFish(){ //+ right, - left
+        UIView.animate(withDuration: 2.0) {
+  
+            self.randomFishImgView?.transform = CGAffineTransform(translationX: -200, y: 0)
+            self.randomFishImgView?.transform = CGAffineTransform(translationX: 220, y: 0)
+            self.randomFishImgView?.transform = CGAffineTransform(translationX: 50, y: 0)
+        }
+        
+        
+        UIView.animate(withDuration: 0.7, animations: {
+            self.randomFishImgView?.transform = CGAffineTransform(translationX: 20, y: 20)
+        }, completion: { _ in
+        
+            UIView.animate(withDuration: 0.5, animations: {
+                self.randomFishImgView?.transform = CGAffineTransform(translationX: -10, y: 30)
+                
+            }, completion: { _ in
+                UIView.animate(withDuration: 0.7, animations: {
+                    self.randomFishImgView?.transform = CGAffineTransform(translationX: 20, y: 10)
+                    
+                }, completion: { _ in
+                    UIView.animate(withDuration: 0.3, animations: {
+                        self.randomFishImgView?.transform = CGAffineTransform(translationX: 10, y: 3)
+                        
+                    }, completion: { _ in
+                        UIView.animate(withDuration: 0.3, animations: {
+                            self.randomFishImgView?.transform = CGAffineTransform(translationX: -10, y: -2)
+                            
+                        }, completion: { _ in
+                            UIView.animate(withDuration: 0.2, animations: {
+                                self.randomFishImgView?.transform = CGAffineTransform(translationX: 8, y: 2)
+                                
+                            }, completion: { _ in
+                                UIView.animate(withDuration: 1, animations: {
+                                    self.randomFishImgView.transform = CGAffineTransform(translationX: -110, y: -100)
+                                })
+                            })
+                        })
+                    })
+                })
+            })
+        })
+    }
 }
-
 
 extension FishingVC: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -96,3 +180,4 @@ extension FishingVC: UIPickerViewDataSource, UIPickerViewDelegate {
             return label
         }
 }
+

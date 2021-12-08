@@ -56,36 +56,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where do you want to go fishing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-nt-ryc">
-                                <rect key="frame" x="63" y="245" width="301" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where do you want to go fishing today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-nt-ryc">
+                                <rect key="frame" x="63" y="244.5" width="301" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-8C-bWb">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-8C-bWb">
                                 <rect key="frame" x="63" y="356" width="288" height="144"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="QaF-kg-cjy"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="0Qf-4D-pgJ" id="5Fd-3J-Ulf"/>
                                     <outlet property="delegate" destination="0Qf-4D-pgJ" id="4vG-PX-UiN"/>
                                 </connections>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Nh-kgO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Nh-kgO">
                                 <rect key="frame" x="153" y="626" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Let's go!"/>
                                 <connections>
                                     <action selector="goButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="aTb-Oi-Dez"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-uj-tKo">
-                                <rect key="frame" x="87" y="338" width="240" height="181"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="181" id="3G4-hd-w4x"/>
-                                    <constraint firstAttribute="width" constant="240" id="9lR-9M-xWC"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woK-ve-9hk">
                                 <rect key="frame" x="149.5" y="708" width="115" height="30"/>
                                 <state key="normal" title="Get another fish!"/>
@@ -93,18 +86,38 @@
                                     <action selector="redoButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="UPk-K7-JG3"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fishing" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-xf-ARL">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fishing" translatesAutoresizingMaskIntoConstraints="NO" id="XaL-xf-ARL">
                                 <rect key="frame" x="87" y="159" width="277" height="192"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="p1B-kA-bVE"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OKz-uj-tKo">
+                                <rect key="frame" x="163" y="359" width="240" height="181"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="181" id="3G4-hd-w4x"/>
+                                    <constraint firstAttribute="width" constant="240" id="9lR-9M-xWC"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="76f-y7-lrx"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="oLe-Nh-kgO" secondAttribute="centerX" id="0zX-gT-eiL"/>
+                            <constraint firstItem="oLe-Nh-kgO" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="153" id="8pa-Oi-Xc4"/>
+                            <constraint firstItem="XaL-xf-ARL" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="87" id="9la-eT-rLl"/>
+                            <constraint firstItem="CO2-8C-bWb" firstAttribute="top" secondItem="XaL-xf-ARL" secondAttribute="bottom" constant="5" id="DrN-pX-l81"/>
                             <constraint firstItem="woK-ve-9hk" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="How-7P-e7G"/>
-                            <constraint firstItem="OKz-uj-tKo" firstAttribute="centerY" secondItem="76f-y7-lrx" secondAttribute="centerY" id="Ugg-Bd-sHk"/>
+                            <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="woK-ve-9hk" secondAttribute="centerX" id="TpK-yt-P0o"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="bottom" secondItem="woK-ve-9hk" secondAttribute="bottom" constant="75" id="VYg-Co-vIM"/>
-                            <constraint firstItem="OKz-uj-tKo" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="dnJ-4Y-rwj"/>
+                            <constraint firstItem="woK-ve-9hk" firstAttribute="top" secondItem="oLe-Nh-kgO" secondAttribute="bottom" constant="52" id="Wyo-sD-fD0"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="OKz-uj-tKo" secondAttribute="trailing" constant="11" id="cqH-6i-AjX"/>
+                            <constraint firstItem="XaL-xf-ARL" firstAttribute="centerY" secondItem="Q8E-nt-ryc" secondAttribute="centerY" id="gSv-eU-0ow"/>
+                            <constraint firstItem="OKz-uj-tKo" firstAttribute="firstBaseline" secondItem="XaL-xf-ARL" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="gh5-oh-oCe"/>
+                            <constraint firstItem="XaL-xf-ARL" firstAttribute="top" secondItem="76f-y7-lrx" secondAttribute="top" constant="115" id="kW5-Vt-xhK"/>
+                            <constraint firstItem="XaL-xf-ARL" firstAttribute="trailing" secondItem="Q8E-nt-ryc" secondAttribute="trailing" id="nvf-WI-enG"/>
+                            <constraint firstItem="CO2-8C-bWb" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="63" id="pui-Fg-Shv"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="XaL-xf-ARL" secondAttribute="trailing" constant="50" id="vlf-2A-z07"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="vEe-0M-lAl"/>
