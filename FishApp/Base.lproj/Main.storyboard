@@ -99,32 +99,83 @@
                                     <constraint firstAttribute="width" constant="240" id="9lR-9M-xWC"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kaljdlkjlak fish" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-cx-r0h">
+                                <rect key="frame" x="48" y="567" width="331" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="331" id="7fS-qf-PoM"/>
+                                    <constraint firstAttribute="height" constant="25" id="svS-Dw-Fpr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="yl5-bJ-Nw5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein: hello" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIY-cA-KCR">
+                                <rect key="frame" x="48" y="617" width="331" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="Wy6-j1-IC5"/>
+                                    <constraint firstAttribute="width" constant="331" id="dit-Xy-hsb"/>
+                                    <constraint firstAttribute="height" constant="25" id="eYs-tt-BKH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region: Greater Alantickjlj" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V4-t9-pVk">
+                                <rect key="frame" x="48" y="650" width="331" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="14g-bo-N7V"/>
+                                    <constraint firstAttribute="width" constant="331" id="2Fz-lz-RsK"/>
+                                    <constraint firstAttribute="height" constant="50" id="UQ8-3O-Ug0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="76f-y7-lrx"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="oLe-Nh-kgO" secondAttribute="centerX" id="0zX-gT-eiL"/>
+                            <constraint firstItem="woK-ve-9hk" firstAttribute="top" secondItem="8V4-t9-pVk" secondAttribute="bottom" constant="8" symbolic="YES" id="23y-j8-8kS"/>
+                            <constraint firstItem="8V4-t9-pVk" firstAttribute="top" secondItem="IIY-cA-KCR" secondAttribute="bottom" constant="8" symbolic="YES" id="2EK-WM-iuD"/>
+                            <constraint firstItem="8V4-t9-pVk" firstAttribute="top" secondItem="IIY-cA-KCR" secondAttribute="bottom" constant="8" symbolic="YES" id="3RF-6k-y1p"/>
                             <constraint firstItem="oLe-Nh-kgO" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="153" id="8pa-Oi-Xc4"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="87" id="9la-eT-rLl"/>
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="top" secondItem="XaL-xf-ARL" secondAttribute="bottom" constant="5" id="DrN-pX-l81"/>
                             <constraint firstItem="woK-ve-9hk" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="How-7P-e7G"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="9Vq-cx-r0h" secondAttribute="trailing" constant="35" id="IYl-ZF-Jfk"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="IIY-cA-KCR" secondAttribute="trailing" constant="35" id="J8u-ZM-e0R"/>
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="woK-ve-9hk" secondAttribute="centerX" id="TpK-yt-P0o"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="bottom" secondItem="woK-ve-9hk" secondAttribute="bottom" constant="75" id="VYg-Co-vIM"/>
+                            <constraint firstItem="8V4-t9-pVk" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="48" id="Vj8-sS-L0e"/>
                             <constraint firstItem="woK-ve-9hk" firstAttribute="top" secondItem="oLe-Nh-kgO" secondAttribute="bottom" constant="52" id="Wyo-sD-fD0"/>
+                            <constraint firstItem="IIY-cA-KCR" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="25" id="b6b-e2-4jK"/>
+                            <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="8V4-t9-pVk" secondAttribute="trailing" constant="35" id="bSc-D8-8dG"/>
+                            <constraint firstItem="IIY-cA-KCR" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="25" id="boO-PE-kKn"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="OKz-uj-tKo" secondAttribute="trailing" constant="11" id="cqH-6i-AjX"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="centerY" secondItem="Q8E-nt-ryc" secondAttribute="centerY" id="gSv-eU-0ow"/>
                             <constraint firstItem="OKz-uj-tKo" firstAttribute="firstBaseline" secondItem="XaL-xf-ARL" secondAttribute="baseline" constant="8" symbolType="layoutAnchor" id="gh5-oh-oCe"/>
+                            <constraint firstItem="IIY-cA-KCR" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="48" id="grI-qY-zz0"/>
+                            <constraint firstItem="9Vq-cx-r0h" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="48" id="k3f-eH-wLE"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="top" secondItem="76f-y7-lrx" secondAttribute="top" constant="115" id="kW5-Vt-xhK"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="trailing" secondItem="Q8E-nt-ryc" secondAttribute="trailing" id="nvf-WI-enG"/>
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="63" id="pui-Fg-Shv"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="XaL-xf-ARL" secondAttribute="trailing" constant="50" id="vlf-2A-z07"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VCw-rb-FXP" appends="YES" id="pUy-aS-AhR"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="vEe-0M-lAl"/>
                     <navigationItem key="navigationItem" id="Qpy-mx-eaA"/>
                     <connections>
                         <outlet property="askLabel" destination="Q8E-nt-ryc" id="BOo-Fu-Ti7"/>
                         <outlet property="fisheriesPicker" destination="CO2-8C-bWb" id="61O-ai-GS5"/>
+                        <outlet property="fishingFishLabel" destination="9Vq-cx-r0h" id="yWD-DC-9bp"/>
+                        <outlet property="fishingFishProtein" destination="IIY-cA-KCR" id="EOw-Db-FWo"/>
+                        <outlet property="fishingFishRegion" destination="8V4-t9-pVk" id="16b-xL-o8t"/>
                         <outlet property="fishingManImgView" destination="XaL-xf-ARL" id="34Z-X4-GRQ"/>
                         <outlet property="goButton" destination="oLe-Nh-kgO" id="zrf-ef-gMF"/>
                         <outlet property="randomFishImgView" destination="OKz-uj-tKo" id="aqi-ra-0bP"/>
@@ -132,6 +183,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHc-Ze-sFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="VCw-rb-FXP">
+                    <connections>
+                        <action selector="onLongPress:" destination="0Qf-4D-pgJ" id="c3S-J6-Rf9"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2598.5507246376815" y="-277.23214285714283"/>
         </scene>

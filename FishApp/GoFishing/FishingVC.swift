@@ -18,9 +18,13 @@ class FishingVC: UIViewController {
     @IBOutlet weak var randomFishImgView: UIImageView!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var fishingManImgView: UIImageView!
+    @IBOutlet var fishingFishLabel: UILabel!
+    @IBOutlet var fishingFishProtein: UILabel!
+    @IBOutlet weak var fishingFishRegion: UILabel!
     var fishInfo: FishInfo!
+    var randomFisheryFish: Fish!
     let imageHelper = ImageHelper()
-
+    var curRanFish: Fish!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        redoButton.isHidden = true
@@ -32,12 +36,15 @@ class FishingVC: UIViewController {
 //        UIView.animate(withDuration: 2.4, animations: {
 //            self.randomFishImgView?.alpha = 1.0
 //        })
+        hideFishInfo()
         redoButton.isHidden = true
         fishingManImgView.isHidden = true
     }
     
     func showFishes(index: Int){
-        if let fisheriesRegion = FisheriesRegion(rawValue: index) {            fishInfo.fishes(for: fisheriesRegion.region())
+        if let fisheriesRegion = FisheriesRegion(rawValue: index) {
+            fishInfo.fishes(for: fisheriesRegion.region())
+            
         }
     }
     @IBAction func goButton(_ sender: Any) {
@@ -50,8 +57,8 @@ class FishingVC: UIViewController {
         showFishes(index: index)
 //        randomFishImgView.isHidden = false
         fishingManImgView.isHidden = false
-
-        fetchFish(urlString: fishInfo.randomFishPic())//seem to show a few fish before generating?
+        curRanFish = fishInfo.randomChosenFish()
+        fetchFish(urlString: curRanFish.pic)//seem to show a few fish before generating?
         randomFishImgView.isHidden = false
         animFish()//animation
         redoButton.isHidden = false
@@ -64,9 +71,26 @@ class FishingVC: UIViewController {
         redoButton.isHidden = true
         randomFishImgView.isHidden = true
         fishingManImgView.isHidden = true
+        hideFishInfo()
 
     }
-    
+    func hideFishInfo(){
+        fishingFishLabel.isHidden = true
+        fishingFishProtein.isHidden = true
+        fishingFishRegion.isHidden = true
+    }
+    func showFishInfo(){
+        fishingFishLabel.isHidden = false
+        fishingFishProtein.isHidden = false
+        fishingFishRegion.isHidden = false
+    }
+    @IBAction func onLongPress(_ sender: UILongPressGestureRecognizer) {
+        fishingFishLabel.text = curRanFish.name
+        fishingFishProtein.text = curRanFish.protein
+        fishingFishRegion.text = curRanFish.fisheries
+        showFishInfo()
+        
+    }
     func fetchFish(urlString: String){
         imageHelper.fetchImage(url: urlString) { result in
             switch result {

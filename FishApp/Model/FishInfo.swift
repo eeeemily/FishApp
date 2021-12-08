@@ -10,6 +10,7 @@ class FishInfo {
     
     var fishs = [Fish]()
     var chosenFishes = [Fish]()
+    var randomChosen: Fish!
     func addFish(name: String, protein: String, quote: String, fisheries: String, pic: String) {
         fishs.append(Fish(name: name, protein: protein, quote: quote, fisheries: fisheries, pic: pic))
     }
@@ -27,7 +28,12 @@ class FishInfo {
         return filtered
     }
     func randomFishPic()->String{
-        return chosenFishes.randomElement()!.pic
+        
+        return randomChosen.pic
+    }
+    func randomChosenFish()->Fish{
+        randomChosen = chosenFishes.randomElement()!
+        return randomChosen
     }
     
 }
