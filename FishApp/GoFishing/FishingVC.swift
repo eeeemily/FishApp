@@ -44,6 +44,7 @@ class FishingVC: UIViewController {
         askLabel.isHidden = true
         fisheriesPicker.isHidden = true
         goButton.isHidden = true
+        
 
         var index: Int = fisheriesPicker.selectedRow(inComponent: 0)
         showFishes(index: index)
@@ -120,30 +121,40 @@ class FishingVC: UIViewController {
         
         UIView.animate(withDuration: 0.7, animations: {
             self.randomFishImgView?.transform = CGAffineTransform(translationX: 20, y: 20)
+            self.fishingManImgView?.rotate(by: 0.005, with: CGPoint(x: 0, y: 0))
+
         }, completion: { _ in
         
             UIView.animate(withDuration: 0.5, animations: {
                 self.randomFishImgView?.transform = CGAffineTransform(translationX: -10, y: 30)
+                self.fishingManImgView?.rotate(by: -0.005, with: CGPoint(x: 0, y: 0))
+
                 
             }, completion: { _ in
                 UIView.animate(withDuration: 0.7, animations: {
                     self.randomFishImgView?.transform = CGAffineTransform(translationX: 20, y: 10)
-                    
+                    self.fishingManImgView?.rotate(by: 0.005, with: CGPoint(x: 0, y: 0))
+
                 }, completion: { _ in
                     UIView.animate(withDuration: 0.3, animations: {
                         self.randomFishImgView?.transform = CGAffineTransform(translationX: 10, y: 3)
-                        
+                        self.fishingManImgView?.rotate(by: -0.005, with: CGPoint(x: 0, y: 0))
+
                     }, completion: { _ in
                         UIView.animate(withDuration: 0.3, animations: {
                             self.randomFishImgView?.transform = CGAffineTransform(translationX: -10, y: -2)
-                            
+                            self.fishingManImgView?.rotate(by: 0.005, with: CGPoint(x: 0, y: 0))
+
                         }, completion: { _ in
                             UIView.animate(withDuration: 0.2, animations: {
                                 self.randomFishImgView?.transform = CGAffineTransform(translationX: 8, y: 2)
-                                
+                                self.fishingManImgView?.rotate(by: -0.005, with: CGPoint(x: 0, y: 0))
+
                             }, completion: { _ in
                                 UIView.animate(withDuration: 1, animations: {
                                     self.randomFishImgView.transform = CGAffineTransform(translationX: -110, y: -100)
+                                    self.fishingManImgView?.rotate(by: 0.09, with: CGPoint(x: 0, y: 0))
+
                                 })
                             })
                         })
