@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--FishingVC-->
         <scene sceneID="PHI-Lz-EVw">
             <objects>
                 <viewController id="0Qf-4D-pgJ" customClass="FishingVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -135,7 +135,7 @@
                             <outletCollection property="gestureRecognizers" destination="VCw-rb-FXP" appends="YES" id="pUy-aS-AhR"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="vEe-0M-lAl"/>
+                    <tabBarItem key="tabBarItem" title="" image="Fishing (1)" selectedImage="Fishing (1)" id="vEe-0M-lAl"/>
                     <navigationItem key="navigationItem" id="Qpy-mx-eaA"/>
                     <connections>
                         <outlet property="askLabel" destination="Q8E-nt-ryc" id="BOo-Fu-Ti7"/>
@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="2598.5507246376815" y="-277.23214285714283"/>
         </scene>
-        <!--Item 1-->
+        <!--HomeVC-->
         <scene sceneID="jcU-BW-rV3">
             <objects>
                 <viewController id="Nsm-NU-hx9" customClass="HomeVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -189,6 +189,9 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZg-ih-RBd">
                                 <rect key="frame" x="241" y="443" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onDarkMode:" destination="Nsm-NU-hx9" eventType="valueChanged" id="ne2-Ub-COX"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Instruction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-NJ-WPh">
                                 <rect key="frame" x="69" y="535" width="128" height="21"/>
@@ -208,7 +211,7 @@
                         <viewLayoutGuide key="safeArea" id="bSj-Xi-cKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="CwW-QA-Yce"/>
+                    <tabBarItem key="tabBarItem" title="" image="setting2" selectedImage="setting2" id="CwW-QA-Yce"/>
                     <connections>
                         <outlet property="onDarkModeSwitch" destination="IZg-ih-RBd" id="9iF-SM-Dof"/>
                         <outlet property="showInstructionSwitch" destination="ek6-gX-qIX" id="Dur-Tw-Yhr"/>
@@ -239,7 +242,7 @@
             </objects>
             <point key="canvasLocation" x="203" y="-599"/>
         </scene>
-        <!--Item-->
+        <!--CookingVC-->
         <scene sceneID="I3H-Rj-BVL">
             <objects>
                 <viewController id="jDQ-YN-aM3" customClass="CookingVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -331,7 +334,7 @@
                             <outletCollection property="gestureRecognizers" destination="8v5-0U-xyS" appends="YES" id="5Te-rl-mpK"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="J2C-jS-DzP"/>
+                    <tabBarItem key="tabBarItem" title="" image="frying-pan" selectedImage="frying-pan" id="J2C-jS-DzP"/>
                     <connections>
                         <outlet property="containerImgView" destination="fHz-aw-mxI" id="LB5-D9-OGz"/>
                         <outlet property="cookingFishNameLabel" destination="Cl5-ie-RyA" id="feY-JO-Jqc"/>
@@ -360,7 +363,7 @@
             </objects>
             <point key="canvasLocation" x="1260.8695652173915" y="-783.48214285714278"/>
         </scene>
-        <!--Item-->
+        <!--Web ViewVC-->
         <scene sceneID="Y5Z-Vf-qlc">
             <objects>
                 <viewController id="ieU-Ov-FFp" customClass="WebViewVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -387,7 +390,7 @@
                         <viewLayoutGuide key="safeArea" id="IWj-ng-tdM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="RWz-3e-frB"/>
+                    <tabBarItem key="tabBarItem" title="" image="Web (1)" selectedImage="Web (1)" id="RWz-3e-frB"/>
                     <connections>
                         <outlet property="urlInputTextField" destination="1lT-dh-SvQ" id="Lou-NL-Q1i"/>
                         <outlet property="webView" destination="eI7-1v-vpE" id="gWx-Bf-TlF"/>
@@ -397,7 +400,7 @@
             </objects>
             <point key="canvasLocation" x="-233.33333333333334" y="82.366071428571431"/>
         </scene>
-        <!--Item-->
+        <!--FishTVC-->
         <scene sceneID="82A-uZ-aRN">
             <objects>
                 <tableViewController storyboardIdentifier="FishTVC" id="6jL-k9-Gw3" customClass="FishTVC" customModule="FishApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -481,7 +484,7 @@
                             <outlet property="delegate" destination="6jL-k9-Gw3" id="cn3-xx-wXe"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="3Tu-j3-AnW"/>
+                    <tabBarItem key="tabBarItem" title="" image="Fish (4)" selectedImage="Fish (4)" id="3Tu-j3-AnW"/>
                     <navigationItem key="navigationItem" id="T6w-Ld-nXa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aOE-bR-XR3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -490,9 +493,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Fish (4)" width="32" height="32"/>
+        <image name="Fishing (1)" width="32" height="32"/>
+        <image name="Web (1)" width="32" height="32"/>
         <image name="container" width="266.5" height="213.5"/>
         <image name="cookin" width="111.5" height="83.5"/>
         <image name="fishing" width="320" height="216"/>
+        <image name="frying-pan" width="32" height="32"/>
+        <image name="setting2" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

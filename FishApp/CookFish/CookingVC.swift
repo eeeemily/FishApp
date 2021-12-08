@@ -39,9 +39,22 @@ class CookingVC: UIViewController {
         cookingFishProteinLabel.isHidden = true
         cookingFishRegionLabel.isHidden = true
         fetchFishPic(urlString: curFish.pic)
+        
+        overrideUserInterfaceStyle = .light
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
 
+//        
+//        if UserDefaults.standard.bool(forKey: dDarkMode) {
+//            overrideUserInterfaceStyle = .dark
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//        } else {
+//            overrideUserInterfaceStyle = .light
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//        }
+
     }
+
+
     @IBAction func onHorizontalSwiipe(_ sender: UISwipeGestureRecognizer){
         switch sender.direction {
             case .left: //next

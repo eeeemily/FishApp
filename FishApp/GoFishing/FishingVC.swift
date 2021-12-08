@@ -31,12 +31,27 @@ class FishingVC: UIViewController {
         super.viewDidLoad()
         
 //        self.tableView.separatorColor = UIColor(named: "yellowish")
-
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//
+//        if UserDefaults.standard.bool(forKey: dDarkMode) {
+//            overrideUserInterfaceStyle = .dark
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//        } else {
+//            overrideUserInterfaceStyle = .light
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//        }
         goButton.tintColor = UIColor.white
         redoButton.tintColor = UIColor.white
 //        self.urlInputTextField.backgroundColor = UIColor(named: "PrimaryColor")
 //        self.urlInputTextField.textColor = UIColor.white
+    }
+    @objc func notificationReceived() {
+        if UserDefaults.standard.bool(forKey: dDarkMode) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+        }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {

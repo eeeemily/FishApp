@@ -74,17 +74,7 @@ class FishTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fishInfo.fishs.count
     }
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            if let fish = fishInfo?.fishs[indexPath.row] as Fish? {
-//                deletionAlert(title: "hey", completion: { _ in
-////                    self.deleteEntry(entry: entry)
-//                    print("hello")
-//                })
-//            }
-//        }
-//    }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FishCell") as? FishCell else {

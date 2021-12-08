@@ -18,10 +18,16 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         showInstructionSwitch.isOn = defaults.bool(forKey: dShowInstruction)
         NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
+        
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        self.urlInputTextField.backgroundColor = UIColor(named: "PrimaryColor")
-//        self.urlInputTextField.textColor = UIColor.white
-//        onDarkModeSwitch.isOn = defaults.bool(forKey: dDarkMode)
+//
+//        if UserDefaults.standard.bool(forKey: dDarkMode) {
+//            overrideUserInterfaceStyle = .dark
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//        } else {
+//            overrideUserInterfaceStyle = .light
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//        }
     }
     @objc func notificationReceived() {
         if UserDefaults.standard.bool(forKey: dDarkMode) {
@@ -30,6 +36,9 @@ class HomeVC: UIViewController {
             overrideUserInterfaceStyle = .light
         }
         
+    }
+    @IBAction func onDarkMode(_ sender: UISwitch) {
+        defaults.set(sender.isOn, forKey: dDarkMode)
     }
     @IBAction func onShownInstruction(_ sender: UISwitch) {
         defaults.set(sender.isOn, forKey: dShowInstruction)

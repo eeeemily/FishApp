@@ -21,6 +21,15 @@ class WebViewVC: UIViewController {
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
         self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
         self.urlInputTextField.textColor = UIColor.white
+//        if UserDefaults.standard.bool(forKey: dDarkMode) {
+//            overrideUserInterfaceStyle = .dark
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//            self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
+//        } else {
+//            overrideUserInterfaceStyle = .light
+//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
+//            self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
+//        }
     }
     
     func loadRequest() {

@@ -11,7 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let defaultsDictionary: [String : Any] = [
-        dDarkMode: true,
+        dDarkMode: false,
         dShowInstruction: true
         
     ]

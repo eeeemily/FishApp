@@ -30,7 +30,6 @@
 		6AC0DB93275F21D700FF97B8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC0DB92275F21D700FF97B8 /* HomeVC.swift */; };
 		6ADD421F276022FE00DD5F30 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD421E276022FE00DD5F30 /* UIImageViewExtension.swift */; };
 		6ADD42212760231300DD5F30 /* UIStackViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD42202760231300DD5F30 /* UIStackViewExtension.swift */; };
-		6ADD4227276059B400DD5F30 /* TapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD4226276059B400DD5F30 /* TapImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,8 @@
 		6AC0DB92275F21D700FF97B8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6ADD421E276022FE00DD5F30 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		6ADD42202760231300DD5F30 /* UIStackViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackViewExtension.swift; sourceTree = "<group>"; };
-		6ADD4226276059B400DD5F30 /* TapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapImageView.swift; sourceTree = "<group>"; };
+		6ADD42282760793A00DD5F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		6ADD42292760793B00DD5F30 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				6AC0DB88275EB4C400FF97B8 /* FishingVC.swift */,
-				6ADD4226276059B400DD5F30 /* TapImageView.swift */,
 			);
 			path = GoFishing;
 			sourceTree = "<group>";
@@ -226,6 +225,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 6A41591E275DC7890038D60C;
 			productRefGroup = 6A415928275DC7890038D60C /* Products */;
@@ -260,7 +260,6 @@
 				6AC0DB84275EB2C300FF97B8 /* Right2LeftSegue.swift in Sources */,
 				6ADD421F276022FE00DD5F30 /* UIImageViewExtension.swift in Sources */,
 				6A41594E275DE0290038D60C /* SwiftJSON.swift in Sources */,
-				6ADD4227276059B400DD5F30 /* TapImageView.swift in Sources */,
 				6A415951275DE0AC0038D60C /* Fish.swift in Sources */,
 				6ADD42212760231300DD5F30 /* UIStackViewExtension.swift in Sources */,
 				6A41592B275DC7890038D60C /* AppDelegate.swift in Sources */,
@@ -286,6 +285,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6A415931275DC7890038D60C /* Base */,
+				6ADD42282760793A00DD5F30 /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -294,6 +294,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6A415936275DC78A0038D60C /* Base */,
+				6ADD42292760793B00DD5F30 /* fr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -305,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -366,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
