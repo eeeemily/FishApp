@@ -14,7 +14,10 @@ class FishTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
-      
+        self.tableView.backgroundColor = UIColor(named: "SecondaryColor")
+//        self.tableView.cell. = UIColor(named: "SecondaryColor")
+//        self.FishCell.UIColor = UIColor(named: "SecondaryColor")
+        
 
     }
 
@@ -87,6 +90,8 @@ class FishTVC: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FishCell") as? FishCell else {
             fatalError("Expected FishCell")
         }
+        cell.backgroundColor = UIColor(named: "PrimaryColor")
+
 
         cell.update(name: fishInfo.fishs[indexPath.row].name, protein: fishInfo.fishs[indexPath.row].protein , quote: fishInfo.fishs[indexPath.row].quote, fisheries: fishInfo.fishs[indexPath.row].fisheries, pic: fishInfo.fishs[indexPath.row].pic)
 

@@ -29,8 +29,14 @@ class FishingVC: UIViewController {
     var curRanFish: Fish!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        redoButton.isHidden = true
-//        fishingManImgView.isHidden = true
+        
+//        self.tableView.separatorColor = UIColor(named: "yellowish")
+
+        self.view.backgroundColor = UIColor(named: "PrimaryColor")
+        goButton.tintColor = UIColor.white
+        redoButton.tintColor = UIColor.white
+//        self.urlInputTextField.backgroundColor = UIColor(named: "PrimaryColor")
+//        self.urlInputTextField.textColor = UIColor.white
     }
 
     override func viewWillAppear(_ animated: Bool) {

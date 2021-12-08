@@ -16,8 +16,11 @@ class WebViewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        urlInputTextField?.text = "https://nasa.gov/"
+        urlInputTextField?.text = "https://www.fishwatch.gov/profiles/all-profiles"
         loadRequest()
+        self.view.backgroundColor = UIColor(named: "PrimaryColor")
+        self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
+        self.urlInputTextField.textColor = UIColor.white
     }
     
     func loadRequest() {
