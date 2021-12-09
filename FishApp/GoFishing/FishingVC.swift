@@ -35,15 +35,15 @@ class FishingVC: UIViewController {
         getFishBtn?.setTitle(NSLocalizedString("Get another fish!", comment: ""), for: .normal)
         goButton?.setTitle(NSLocalizedString("Let's go!", comment: ""), for: .normal)
         askLabel.text = NSLocalizedString("Where do you want to go for fishing?", comment: "")
-//        if UserDefaults.standard.bool(forKey: dDarkMode) {
-//            overrideUserInterfaceStyle = .dark
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        } else {
-//            overrideUserInterfaceStyle = .light
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        }
-        goButton.tintColor = UIColor.white
-        redoButton.tintColor = UIColor.white
+        //making button round
+        redoButton.layer.cornerRadius = 5
+        goButton.layer.cornerRadius = 5
+        
+        //dark mode
+        self.view.backgroundColor = UIColor(named: "PrimaryColor")
+
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
+
     }
     @objc func notificationReceived() {
         if UserDefaults.standard.bool(forKey: dDarkMode) {
@@ -51,7 +51,6 @@ class FishingVC: UIViewController {
         } else {
             overrideUserInterfaceStyle = .light
         }
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {

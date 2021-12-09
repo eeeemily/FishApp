@@ -14,13 +14,21 @@ class FishTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
-        self.tableView.backgroundColor = UIColor(named: "SecondaryColor")
-//        self.tableView.cell. = UIColor(named: "SecondaryColor")
-//        self.FishCell.UIColor = UIColor(named: "SecondaryColor")
         
+        //dark mode
+        self.view.backgroundColor = UIColor(named: "PrimaryColor")
+        self.tableView.backgroundColor = UIColor(named: "SecondaryColor")
+
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
 
     }
-
+    @objc func notificationReceived() {
+        if UserDefaults.standard.bool(forKey: dDarkMode) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+        }
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         

@@ -38,18 +38,18 @@ class CookingVC: UIViewController {
         cookingFishRegionLabel.isHidden = true
         fetchFishPic(urlString: curFish.pic)
         
-//        overrideUserInterfaceStyle = .light
+        //dark mode
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
 
-//        
-//        if UserDefaults.standard.bool(forKey: dDarkMode) {
-//            overrideUserInterfaceStyle = .dark
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        } else {
-//            overrideUserInterfaceStyle = .light
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        }
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
 
+    }
+    @objc func notificationReceived() {
+        if UserDefaults.standard.bool(forKey: dDarkMode) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+        }
     }
 
 

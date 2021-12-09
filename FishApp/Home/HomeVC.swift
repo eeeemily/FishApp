@@ -23,14 +23,10 @@ class HomeVC: UIViewController {
         darkModeLabel.text = NSLocalizedString("Dark Mode", comment: "")
         showInstructionLabel.text = NSLocalizedString("Show Instruction", comment: "")
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//
-//        if UserDefaults.standard.bool(forKey: dDarkMode) {
-//            overrideUserInterfaceStyle = .dark
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        } else {
-//            overrideUserInterfaceStyle = .light
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//        }
+        //dark mode
+        self.view.backgroundColor = UIColor(named: "PrimaryColor")
+
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
     }
     @objc func notificationReceived() {
         if UserDefaults.standard.bool(forKey: dDarkMode) {
@@ -42,6 +38,8 @@ class HomeVC: UIViewController {
     }
     @IBAction func onDarkMode(_ sender: UISwitch) {
         defaults.set(sender.isOn, forKey: dDarkMode)
+        viewDidLoad()
+        NotificationCenter.default.post(name: Notification.Name("darkModeChanged"), object: nil)
     }
     @IBAction func onShownInstruction(_ sender: UISwitch) {
         defaults.set(sender.isOn, forKey: dShowInstruction)

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,27 +19,21 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where do you want to go fishing today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8E-nt-ryc">
                                 <rect key="frame" x="48" y="245" width="316" height="66"/>
+                                <color key="backgroundColor" red="0.60600000620000005" green="0.70200002189999999" blue="0.74900001289999996" alpha="0.53481079929999997" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="gjq-HA-1Uy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-8C-bWb">
-                                <rect key="frame" x="32" y="356" width="351" height="205"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="QaF-kg-cjy"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="dataSource" destination="0Qf-4D-pgJ" id="5Fd-3J-Ulf"/>
-                                    <outlet property="delegate" destination="0Qf-4D-pgJ" id="4vG-PX-UiN"/>
-                                </connections>
-                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLe-Nh-kgO">
                                 <rect key="frame" x="48" y="619" width="316" height="37"/>
+                                <color key="backgroundColor" name="SecondaryColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <state key="normal" title="Let's go!"/>
+                                <state key="normal" title="Let's go!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="goButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="aTb-Oi-Dez"/>
                                 </connections>
@@ -56,39 +51,6 @@
                                     <constraint firstAttribute="width" constant="240" id="9lR-9M-xWC"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kaljdlkjlak fish" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-cx-r0h">
-                                <rect key="frame" x="48" y="560" width="331" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="331" id="7fS-qf-PoM"/>
-                                    <constraint firstAttribute="height" constant="25" id="svS-Dw-Fpr"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="yl5-bJ-Nw5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein: hello" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIY-cA-KCR">
-                                <rect key="frame" x="48" y="610" width="331" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="Wy6-j1-IC5"/>
-                                    <constraint firstAttribute="width" constant="331" id="dit-Xy-hsb"/>
-                                    <constraint firstAttribute="height" constant="25" id="eYs-tt-BKH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region: Greater Alantickjlj" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V4-t9-pVk">
-                                <rect key="frame" x="48" y="643" width="331" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="14g-bo-N7V"/>
-                                    <constraint firstAttribute="width" constant="331" id="2Fz-lz-RsK"/>
-                                    <constraint firstAttribute="height" constant="50" id="UQ8-3O-Ug0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mi7-CO-sEo">
                                 <rect key="frame" x="0.0" y="273" width="414" height="540"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -98,11 +60,58 @@
                                     <outletCollection property="gestureRecognizers" destination="Dp7-XK-om2" appends="YES" id="LbM-Pz-C9j"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kaljdlkjlak fish" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-cx-r0h">
+                                <rect key="frame" x="48" y="560" width="331" height="25"/>
+                                <color key="backgroundColor" red="0.20795099419999999" green="0.39881821099999998" blue="0.42041190080000002" alpha="0.53481079929999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="331" id="7fS-qf-PoM"/>
+                                    <constraint firstAttribute="height" constant="25" id="svS-Dw-Fpr"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="yl5-bJ-Nw5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="secondarySystemBackgroundColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Protein: hello" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIY-cA-KCR">
+                                <rect key="frame" x="48" y="610" width="331" height="25"/>
+                                <color key="backgroundColor" red="0.20795099419999999" green="0.39881821099999998" blue="0.42041190080000002" alpha="0.53481079929999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="Wy6-j1-IC5"/>
+                                    <constraint firstAttribute="width" constant="331" id="dit-Xy-hsb"/>
+                                    <constraint firstAttribute="height" constant="25" id="eYs-tt-BKH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CO2-8C-bWb">
+                                <rect key="frame" x="47" y="356" width="320" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="205" id="OYa-PQ-kUZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="0Qf-4D-pgJ" id="5Fd-3J-Ulf"/>
+                                    <outlet property="delegate" destination="0Qf-4D-pgJ" id="4vG-PX-UiN"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region: Greater Alantickjlj" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V4-t9-pVk">
+                                <rect key="frame" x="48" y="643" width="331" height="50"/>
+                                <color key="backgroundColor" red="0.20795099423772992" green="0.39881821098602066" blue="0.42041190076120116" alpha="0.53481079931972786" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="331" id="14g-bo-N7V"/>
+                                    <constraint firstAttribute="width" constant="331" id="2Fz-lz-RsK"/>
+                                    <constraint firstAttribute="height" constant="50" id="UQ8-3O-Ug0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="systemBackgroundColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="woK-ve-9hk">
                                 <rect key="frame" x="32" y="159" width="205" height="32"/>
+                                <color key="backgroundColor" name="SecondaryColor"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="Get another fish!">
-                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="redoButton:" destination="0Qf-4D-pgJ" eventType="touchUpInside" id="UPk-K7-JG3"/>
@@ -113,7 +122,6 @@
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="oLe-Nh-kgO" secondAttribute="centerX" id="0zX-gT-eiL"/>
                             <constraint firstItem="8V4-t9-pVk" firstAttribute="top" secondItem="IIY-cA-KCR" secondAttribute="bottom" constant="8" symbolic="YES" id="2EK-WM-iuD"/>
                             <constraint firstItem="8V4-t9-pVk" firstAttribute="top" secondItem="IIY-cA-KCR" secondAttribute="bottom" constant="8" symbolic="YES" id="3RF-6k-y1p"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="4V9-yU-qZy"/>
@@ -124,6 +132,7 @@
                             <constraint firstItem="CO2-8C-bWb" firstAttribute="top" secondItem="Q8E-nt-ryc" secondAttribute="bottom" constant="45" id="QkU-Ef-ENW"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="bottom" secondItem="oLe-Nh-kgO" secondAttribute="bottom" constant="157" id="UOa-ZM-9ps"/>
                             <constraint firstItem="8V4-t9-pVk" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="48" id="Vj8-sS-L0e"/>
+                            <constraint firstItem="CO2-8C-bWb" firstAttribute="centerX" secondItem="76f-y7-lrx" secondAttribute="centerX" id="WAO-xT-Lqj"/>
                             <constraint firstItem="oLe-Nh-kgO" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="34" id="Yq7-Vg-H9n"/>
                             <constraint firstItem="IIY-cA-KCR" firstAttribute="top" secondItem="9Vq-cx-r0h" secondAttribute="bottom" constant="25" id="b6b-e2-4jK"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="8V4-t9-pVk" secondAttribute="trailing" constant="35" id="bSc-D8-8dG"/>
@@ -135,7 +144,6 @@
                             <constraint firstItem="9Vq-cx-r0h" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="48" id="k3f-eH-wLE"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="top" secondItem="76f-y7-lrx" secondAttribute="top" constant="115" id="kW5-Vt-xhK"/>
                             <constraint firstItem="XaL-xf-ARL" firstAttribute="trailing" secondItem="Q8E-nt-ryc" secondAttribute="trailing" id="nvf-WI-enG"/>
-                            <constraint firstItem="CO2-8C-bWb" firstAttribute="leading" secondItem="76f-y7-lrx" secondAttribute="leading" constant="63" id="pui-Fg-Shv"/>
                             <constraint firstItem="Q8E-nt-ryc" firstAttribute="leading" secondItem="9Vq-cx-r0h" secondAttribute="leading" id="qeN-5k-Hn3"/>
                             <constraint firstItem="Q8E-nt-ryc" firstAttribute="top" secondItem="woK-ve-9hk" secondAttribute="bottom" constant="54" id="rec-mR-Vdw"/>
                             <constraint firstItem="76f-y7-lrx" firstAttribute="trailing" secondItem="XaL-xf-ARL" secondAttribute="trailing" constant="50" id="vlf-2A-z07"/>
@@ -182,42 +190,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZg-ih-RBd">
-                                <rect key="frame" x="273" y="451" width="49" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZg-ih-RBd">
+                                <rect key="frame" x="283" y="530" width="51" height="31"/>
                                 <connections>
                                     <action selector="onDarkMode:" destination="Nsm-NU-hx9" eventType="valueChanged" id="ne2-Ub-COX"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Show Instruction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fb-NJ-WPh">
-                                <rect key="frame" x="55" y="536" width="245" height="25"/>
+                                <rect key="frame" x="51" y="610" width="212" height="25"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtK-UU-RKJ">
-                                <rect key="frame" x="55" y="456" width="113.5" height="21"/>
+                                <rect key="frame" x="51" y="535" width="113.5" height="21"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-gX-qIX">
-                                <rect key="frame" x="273" y="530" width="49" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ek6-gX-qIX">
+                                <rect key="frame" x="283" y="604" width="51" height="31"/>
                                 <connections>
                                     <action selector="onShownInstruction:" destination="Nsm-NU-hx9" eventType="valueChanged" id="oTW-7P-D4V"/>
                                 </connections>
                             </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KXu-kq-0SK">
+                                <rect key="frame" x="51" y="161" width="313" height="340"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fish App® v. 1.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08A-XE-kn2">
+                                <rect key="frame" x="106" y="746" width="202" height="21"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bSj-Xi-cKS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="leading" secondItem="bSj-Xi-cKS" secondAttribute="leading" constant="55" id="0a9-RO-6Kc"/>
-                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="trailing" secondItem="IZg-ih-RBd" secondAttribute="trailing" constant="94" id="D0v-Xh-Wc1"/>
-                            <constraint firstItem="IZg-ih-RBd" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="407" id="NKs-sO-HZM"/>
-                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="bottom" secondItem="2Fb-NJ-WPh" secondAttribute="bottom" constant="252" id="Odm-SN-gst"/>
-                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="412" id="RP8-1Z-i9a"/>
-                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="bottom" secondItem="ek6-gX-qIX" secondAttribute="bottom" constant="252" id="e2d-Fs-EWe"/>
-                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="trailing" secondItem="ek6-gX-qIX" secondAttribute="trailing" constant="94" id="mfw-jV-gJb"/>
-                            <constraint firstItem="2Fb-NJ-WPh" firstAttribute="leading" secondItem="bSj-Xi-cKS" secondAttribute="leading" constant="55" id="z7i-ut-8Dy"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="491" id="6xe-BN-Acp"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="top" secondItem="KXu-kq-0SK" secondAttribute="bottom" constant="34" id="7uZ-Ed-4ps"/>
+                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="bottom" secondItem="08A-XE-kn2" secondAttribute="bottom" constant="46" id="BnR-Bt-eys"/>
+                            <constraint firstItem="IZg-ih-RBd" firstAttribute="leading" secondItem="ek6-gX-qIX" secondAttribute="leading" id="M3G-V9-zxI"/>
+                            <constraint firstItem="2Fb-NJ-WPh" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="566" id="Trb-FQ-WPX"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="leading" secondItem="2Fb-NJ-WPh" secondAttribute="leading" id="d3S-s6-ElO"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="leading" secondItem="bSj-Xi-cKS" secondAttribute="leading" constant="51" id="fuY-4M-hf9"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="centerY" secondItem="IZg-ih-RBd" secondAttribute="centerY" id="oc9-o7-MuI"/>
+                            <constraint firstItem="KXu-kq-0SK" firstAttribute="centerX" secondItem="bSj-Xi-cKS" secondAttribute="centerX" id="q4k-Bb-eQI"/>
+                            <constraint firstItem="08A-XE-kn2" firstAttribute="centerX" secondItem="bSj-Xi-cKS" secondAttribute="centerX" id="rIc-hB-dD3"/>
+                            <constraint firstItem="KXu-kq-0SK" firstAttribute="top" secondItem="bSj-Xi-cKS" secondAttribute="top" constant="117" id="tKl-Qq-KyS"/>
+                            <constraint firstItem="HtK-UU-RKJ" firstAttribute="leading" secondItem="KXu-kq-0SK" secondAttribute="leading" id="vJd-RH-ZHx"/>
+                            <constraint firstItem="ek6-gX-qIX" firstAttribute="top" secondItem="IZg-ih-RBd" secondAttribute="bottom" constant="43" id="vyt-89-CWD"/>
+                            <constraint firstItem="bSj-Xi-cKS" firstAttribute="trailing" secondItem="IZg-ih-RBd" secondAttribute="trailing" constant="82" id="xkh-tY-0YG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="setting2" selectedImage="setting2" id="CwW-QA-Yce"/>
@@ -511,7 +534,17 @@
         <image name="cookin" width="111.5" height="83.5"/>
         <image name="fishing" width="320" height="216"/>
         <image name="frying-pan" width="32" height="32"/>
+        <image name="logo" width="512" height="512"/>
         <image name="setting2" width="32" height="32"/>
+        <namedColor name="SecondaryColor">
+            <color red="0.76099997758865356" green="0.54100000858306885" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

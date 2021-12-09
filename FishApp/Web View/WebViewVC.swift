@@ -21,15 +21,18 @@ class WebViewVC: UIViewController {
         self.view.backgroundColor = UIColor(named: "PrimaryColor")
         self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
         self.urlInputTextField.textColor = UIColor.white
-//        if UserDefaults.standard.bool(forKey: dDarkMode) {
-//            overrideUserInterfaceStyle = .dark
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//            self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
-//        } else {
-//            overrideUserInterfaceStyle = .light
-//            self.view.backgroundColor = UIColor(named: "PrimaryColor")
-//            self.urlInputTextField.backgroundColor = UIColor(named: "SecondaryColor")
-//        }
+        //dark mode
+        self.view.backgroundColor = UIColor(named: "PrimaryColor")
+
+        NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
+
+    }
+    @objc func notificationReceived() {
+        if UserDefaults.standard.bool(forKey: dDarkMode) {
+            overrideUserInterfaceStyle = .dark
+        } else {
+            overrideUserInterfaceStyle = .light
+        }
     }
     
     func loadRequest() {
