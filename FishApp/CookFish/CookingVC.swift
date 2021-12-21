@@ -19,6 +19,8 @@ class CookingVC: UIViewController {
     @IBOutlet weak var cookingFishNameLabel: UILabel!
     @IBOutlet weak var cookingFishProteinLabel: UILabel!
     @IBOutlet weak var cookingFishRegionLabel: UILabel!
+    @IBOutlet weak var longPressIcon: UIImageView!
+    @IBOutlet var longPressLabel: UIView!
     //    var fishInfo: FishInfo!
     var cookingFish = FishInfo()
     var curFish: Fish!
@@ -82,11 +84,15 @@ class CookingVC: UIViewController {
         cookingFishRegionLabel.isHidden = false
     }
     func showFishInfo(){
+        longPressLabel.isHidden = true
+        longPressIcon.isHidden = true
         cookingFishNameLabel.isHidden = false
         cookingFishProteinLabel.isHidden = false
         cookingFishRegionLabel.isHidden = false
     }
     func hideFishInfo(){
+        longPressIcon.isHidden = false
+        longPressLabel.isHidden = false
         cookingFishNameLabel.isHidden = true
         cookingFishProteinLabel.isHidden = true
         cookingFishRegionLabel.isHidden = true
