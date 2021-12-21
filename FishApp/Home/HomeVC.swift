@@ -19,6 +19,7 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         showInstructionSwitch.isOn = defaults.bool(forKey: dShowInstruction)
+        onDarkModeSwitch.isOn = defaults.bool(forKey: dDarkMode)
         NotificationCenter.default.addObserver(self, selector: #selector(notificationReceived), name: Notification.Name("darkModeChanged"), object: nil)
         darkModeLabel.text = NSLocalizedString("Dark Mode", comment: "")
         showInstructionLabel.text = NSLocalizedString("Show Instruction", comment: "")
